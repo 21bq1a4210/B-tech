@@ -1,0 +1,11 @@
+Result:
+
+TestCase-1:
+enter elements:10 21 24 40 99
+enter key:40
+element found at 4
+
+TestCase-2:
+enter elements:10 21 34 40 99
+enter key:9
+element not found

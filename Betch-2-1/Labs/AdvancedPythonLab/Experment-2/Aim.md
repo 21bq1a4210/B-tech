@@ -1,0 +1,1 @@
+Aim: To write a program to find out the list of words that can be formed with the letter's ‘A’, ‘K’, ‘E’, ‘O’, ‘T’, ‘P’, ‘N’ from the given list of words Arun, Varun, Kent, Eat, Pot, Net, Peak, Peacock, Zebra, Toe, Poke, Knife, Peot, Venus, Ant. 

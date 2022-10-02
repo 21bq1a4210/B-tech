@@ -1,0 +1,10 @@
+Result:
+
+Test-case-1:
+enter a sentence:Education
+sentence contain all the vowels
+
+
+Test-case-2:
+enter a sentence:Advanced Python lab
+sentence don’t contain all the vowels

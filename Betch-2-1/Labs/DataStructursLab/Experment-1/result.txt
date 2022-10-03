@@ -1,11 +1,11 @@
 Result:
 
 TestCase-1:
-enter the input list:21 1 42 10
-enter key element:10
-element is found at the location:4
+enter elements:10 21 24 40 99
+enter key:40
+element found at 4
 
 TestCase-2:
-enter the input list:21 1 42 10
-enter key element:9
-element is not found
+enter elements:10 21 34 40 99
+enter key:9
+element not found

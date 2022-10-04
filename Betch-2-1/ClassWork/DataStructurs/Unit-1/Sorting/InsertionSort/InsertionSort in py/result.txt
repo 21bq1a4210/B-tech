@@ -1,0 +1,9 @@
+Result:
+
+TestCase-1:
+enter elements:34 76 87 89 15 82
+[15, 34, 76, 82, 87, 89]
+
+TestCase-2:
+enter elements:1 2 2 4 3 4
+[1, 2, 2, 3, 4, 4]

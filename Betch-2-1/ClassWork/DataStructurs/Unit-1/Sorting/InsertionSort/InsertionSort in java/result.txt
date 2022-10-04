@@ -1,0 +1,11 @@
+Result:
+
+TestCases-1:
+enter no.of elements:5
+enter elements:10 9 11 55 3
+sorted array:3 9 10 11 55
+
+TestCases-2:
+enter no.of elements:5
+enter elements:3 2 1 2 1
+sorted array:1 1 2 2 3 

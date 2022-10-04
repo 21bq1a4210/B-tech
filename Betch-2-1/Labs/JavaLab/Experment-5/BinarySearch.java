@@ -25,16 +25,16 @@ class BinarySearch { //start of the BinarySearch class
             if(key==arr[mid]){ //checking for condition
                 System.out.println("element found at:"+(mid+1)); //promt
                 break; // if condition statifies break from the loop
-            }
-            else if(key>mid){
+            }//end of if block
+            else if(key>mid){ //start of if block
                 l=mid+1; //change low value
-            }
-            else if(key<mid){
+            } //end of if block
+            else if(key<mid){ //start of else if block
                 h=mid-1; //change high value
-            }
-            else{
-                System.out.println("element not found");
-            }
+            } //end of else if block
+            else{ //start of else block 
+                System.out.println("element not found"); //promt
+            } //end of else block
         }
     } 
 

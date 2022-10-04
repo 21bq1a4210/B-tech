@@ -6,6 +6,7 @@ class BinarySearch { //start of the BinarySearch class
         read(); //calling read method of same class
         search();// calling search method of same class
     }
+    
     private static void read(){ //start of private static method read
         System.out.print("enter no.of ele:"); //promt
         arr=new int[sc.nextInt()]; //allocating memoery
@@ -35,10 +36,9 @@ class BinarySearch { //start of the BinarySearch class
             else{ //start of else block 
                 System.out.println("element not found"); //promt
             } //end of else block
-        }
-    } 
-
-};
+        } //end of while block
+    } //end of search method
+}; //end of BinarySearch class
 
 class Main{ //start of main class
     public static void main(String[] args) { //start main method

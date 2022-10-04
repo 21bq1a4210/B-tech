@@ -25,10 +25,10 @@ class BinarySearch {
                 System.out.println("element found at:"+(mid+1));
                 break;
             }
-            else if(key<mid){
+            else if(key>mid){
                 l=mid+1;
             }
-            else if(key>mid){
+            else if(key<mid){
                 h=mid-1;
             }
             else{

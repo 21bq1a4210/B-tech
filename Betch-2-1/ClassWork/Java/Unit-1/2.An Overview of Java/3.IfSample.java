@@ -1,4 +1,4 @@
-public class IfSample {
+class IfSample {
 /*
     Demonstrate the if.
     Call this file "IfSample.java".

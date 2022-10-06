@@ -22,6 +22,6 @@ public class Ex1_Integer{
     System.out.println("double d="+d);
     System.out.printf("int i=%d, o=%d, h=%d\n",i,o,h);  //int i=-2147483647, o=101, h=145
     System.out.println("short s="+s);   //short s=-32767
-    System.out.println("byte b="+b);    //byte b=-127
+    System.out.println("byte b="+b);    //byte b=-127Quintonboy1
    }
 }

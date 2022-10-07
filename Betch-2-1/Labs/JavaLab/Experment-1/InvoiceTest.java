@@ -20,8 +20,6 @@ public class InvoiceTest{
 		int qua=scan.nextInt();			  //read a integer
 		ob1.setQuantity(qua);			 //set the item quantity 
 		
-
-
 		System.out.print("Enter system prise:");//prompt
 		double pri=scan.nextDouble();          //read a double
 		ob1.setPrise(pri);                    //set the ite prise

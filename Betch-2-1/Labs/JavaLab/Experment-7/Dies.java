@@ -11,23 +11,22 @@ class PairDies{//start of PairDies class
         for(int i=0;i<10_000;i++){//start of for loop iterating over 10k time by the pb
             int rand_int1 = rand.nextInt(1,7);//storing a random in in b/w 1 to 6 in rand_int1
 		    int rand_int2 = rand.nextInt(1,7);//storing a random in in b/w 1 to 6 in rand_int2
-            if(rand_int1==rand_int2){//if both are equal then increasing the arr[index-1]
-                int j=rand_int1;
-                j--;
-                arr[--rand_int1]+=1;
-            }
-        }
-    }
+
+            if(rand_int1==rand_int2){//start of if block
+                arr[--rand_int1]+=1;//if both are equal then increasing the arr[rand_int1-1] cuz index start from 0
+            }//end of if block
+        }//end of for block
+    }//end of random method
    
-    private void display(){
-        for(int i=0;i<arr.length;i++){
+    private void display(){//start of display method
+        for(int i=0;i<arr.length;i++){//start of for block
             System.out.println("("+(i+1)+","+(i+1)+")"+"="+arr[i]);
-        }
-    }
-        
-}
-class Main{ 
-    public static void main(String args[]) { 
-        PairDies pd=new PairDies();
-	} 
-} 
+        }//end of for block
+    }//end of display method 
+}//end of PairDies class
+
+class Main{//start Main class
+    public static void main(String args[]) { //start of main method
+        PairDies pd=new PairDies();////creating an obj of PairDies class and allocating memory 
+	} //end of main method
+}; //end of main class

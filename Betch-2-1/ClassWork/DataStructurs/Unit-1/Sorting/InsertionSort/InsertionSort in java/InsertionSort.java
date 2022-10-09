@@ -39,6 +39,7 @@ class InsertionSort{
 
 class Main{
     public static void main(String[] args) {
-        InsertionSort is=new InsertionSort();
+        InsertionSort is1=new InsertionSort();
+        InsertionSort is2=new InsertionSort();
     }
 }

@@ -25,7 +25,7 @@ for i in range(5):
 
 
 df=pd.DataFrame(myDataset)
-sorted_df = df.sort_values(by=['nSal'], ascending=False)
+sorted_df = df.sort_values(by=['nSal'], ascending=False,kind="quicksort")
 print(sorted_df)
 print()
 print("high salary:")

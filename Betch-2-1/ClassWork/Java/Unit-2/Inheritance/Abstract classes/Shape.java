@@ -18,21 +18,25 @@ class Circle extends D2{    //child class of concreat class (D2)
     Circle(double radius){
         length=radius;
     }
+    @Override
     public double area(){   //redefined for behivour 
         return (22/7)*length*length;
     }
+    @Override
     public void display(){
         System.out.println("the area of the circle:"+area()+"sqrt U");
     }
 };
 
-class Cube extends D2{      //child class of concreat class (D2
+class Cube extends D3{      //child class of concreat class (D2
     Cube(double side){
         length=side;
     }
+    @Override
     public double volume(){   //redefined for behivour
         return length*length*length;
     }
+    @Override
     public void display(){
         System.out.println("the area of the square:"+volume()+"sqrt U");
     }

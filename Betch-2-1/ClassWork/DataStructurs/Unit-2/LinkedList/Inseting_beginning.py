@@ -11,10 +11,15 @@ class LinkedList:
         while temp:
             print(temp.data,end=" ")
             temp=temp.next
-    def push(self,new_data):#1
-        new_node=Node(new_data)#2
-        new_node.next=self.head#3
-        self.head=new_node#4
+    #Function used to insert a new node at the beginning
+    def push(self,new_data):#1line
+        #step 1&2: Allocate the Node &
+        #      Put in the data
+        new_node=Node(new_data)#2line
+        #step 3: Make next of new Node as head
+        new_node.next=self.head#3line
+        #step 4: Move the head to ref to new Node
+        self.head=new_node#4line
         """
         In the 2nd line of the method we are creating a new node using Node class
         In the 3rd line we are assining the data address of the N1 to New_Node/

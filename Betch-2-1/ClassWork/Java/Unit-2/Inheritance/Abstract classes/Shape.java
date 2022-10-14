@@ -49,5 +49,6 @@ class Main{
 
         Shape s2 = new Cube(10);
         s2.display();
+        String.format(null, args)
     }
 }

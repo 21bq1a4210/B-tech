@@ -1,9 +1,11 @@
 class A{  
+    
     A(){
+        this(5);
         System.out.println("hello a");
     }  
     A(int x){  
-        this();  
+        //this();  
         System.out.println(x);  
     }
 };

@@ -20,11 +20,12 @@ class LinkedList:
         if self.head is None:#3line
             self.head=Node(new_data)#4line
         #step 5: Else traverse till the lat node
-        last=self.head#5line
-        while last.next:#6line
-            last=last.next#7line
+        else:
+            last=self.head#5line
+            while last.next:#6line
+                last=last.next#7line
         #step 6: Change the next of last node
-        last.next=new_node#8line
+            last.next=new_node#8line
         '''
         In the 2st line we are creating a NewNode using Node class
         In the 3nd line we are checking for the condition whether the linledlist\
@@ -38,15 +39,7 @@ class LinkedList:
         '''
 if __name__=="__main__":
     ll1=LinkedList()
-    ll1.head=Node(1)
-    N2=Node(2)
-    N3=Node(3)
-    ll1.head.next=N2
-    N2.next=N3
-    ll1.print()#1 2 3
-    ll1.append(0)
-    print()#\n
-    ll1.print()#1 2 3 0
-    print()#\n
     ll1.append(-1)
-    ll1.print()#1 2 3 0 -1
+    ll1.append(0)
+    ll1.append(1)
+    ll1.print()#-1 0 1

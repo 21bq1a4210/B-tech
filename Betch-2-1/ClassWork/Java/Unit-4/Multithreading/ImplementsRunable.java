@@ -32,3 +32,50 @@ class ThreadDemo{
         System.out.println("end of "+Thread.currentThread().getName());
     }
 };
+//test-case-1:
+/*the demo thread:Thread[Demo thread,5,main]
+Demo thread:0
+main:5
+Demo thread:1
+main:4
+Demo thread:2
+Demo thread:3
+main:3
+Demo thread:4
+Demo thread:5
+main:2
+end of Demo thread
+main:1
+end of main */
+
+//test case-2:
+/*the demo thread:Thread[Demo thread,5,main]
+main:5
+Demo thread:0
+Demo thread:1
+main:4
+Demo thread:2
+Demo thread:3
+main:3
+Demo thread:4
+Demo thread:5
+main:2
+end of Demo thread
+main:1
+end of main */
+
+//test case-3:
+/*the demo thread:Thread[Demo thread,5,main]
+main:5
+Demo thread:0
+Demo thread:1
+Demo thread:2
+main:4
+Demo thread:3
+Demo thread:4
+main:3
+Demo thread:5
+main:2
+end of Demo thread
+main:1
+end of main */

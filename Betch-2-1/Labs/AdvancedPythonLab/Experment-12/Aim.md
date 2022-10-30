@@ -1,0 +1,1 @@
+Accumulate all words into the respective alphabet buckets from the given text file.

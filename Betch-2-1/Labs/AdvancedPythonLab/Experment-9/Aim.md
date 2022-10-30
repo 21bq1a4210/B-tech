@@ -1,0 +1,1 @@
+Demonstrate the car sales of a show room during the last 6 months with the help of bar chart. (Use matplotlib) demonstrate.

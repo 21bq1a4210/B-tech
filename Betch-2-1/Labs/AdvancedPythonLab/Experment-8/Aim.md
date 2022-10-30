@@ -1,0 +1,1 @@
+Write a Numpy program to swap rows and columns of a given array in reverse order.

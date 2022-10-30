@@ -1,0 +1,1 @@
+Write a program to count the numbers of characters in the string and store them in a dictionary data structure

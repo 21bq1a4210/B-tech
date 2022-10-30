@@ -1,0 +1,1 @@
+Find out number of lines, words, characters in a given text file.

@@ -1,0 +1,1 @@
+Demonstrate the pass percentage of students joined in 2019-20 academic year in I-II semester with the help of bar chart, pie chart, scatter plot.

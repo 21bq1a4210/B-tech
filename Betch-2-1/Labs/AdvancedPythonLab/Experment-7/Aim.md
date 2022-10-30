@@ -1,0 +1,1 @@
+Write a Python program to compute the eigen values and right eigen vectors of a given square array.

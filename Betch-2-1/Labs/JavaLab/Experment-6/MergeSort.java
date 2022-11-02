@@ -46,9 +46,9 @@ class Main{//start of main class
     public static void main(String [] args) {//start of main method
       int a[],n;//local vars
       Scanner sc= new Scanner(System.in);//creating scanner obj
-      System.out.println("enter array size:");//promt
+      System.out.print("enter array size:");//promt
       n=sc.nextInt();//no.of ele
-        System.out.println("enter no.of ele:");//promt
+        System.out.print("enter the ele:");//promt
         a=new int[n];//alocating arr size
         for(int i=0;i<n;i++)
              a[i]=sc.nextInt();

@@ -30,3 +30,22 @@ class Main{//start Main class
         PairDies pd=new PairDies();////creating an obj of PairDies class and allocating memory 
 	} //end of main method
 }; //end of main class
+
+//result:
+/*
+ *Test-case-1:
+    (1,1)=262
+    (2,2)=293
+    (3,3)=288
+    (4,4)=287
+    (5,5)=272
+    (6,6)=298
+
+*Test-case-2:
+    (1,1)=278
+    (2,2)=287
+    (3,3)=270
+    (4,4)=290
+    (5,5)=306
+    (6,6)=249
+ */

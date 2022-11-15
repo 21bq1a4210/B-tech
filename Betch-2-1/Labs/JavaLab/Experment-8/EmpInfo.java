@@ -1,11 +1,16 @@
-import java.util.Scanner;
-class Employee{
-    String Emp_name;
-    int Emp_id;
-    String Address;
-    String Mail_id;
-    int Mobile_no;
+import java.util.Scanner;   //importing Scanner class
+class Employee{ //start of the super class Employee
+    //the class contains emp_name, emp_id, Address, Mail_id and Mobile_no as private members
+    private String Emp_name;    
+    private int Emp_id;
+    private String Address;
+    private String Mail_id;
+    private int Mobile_no;
+
     public void read(){
+        /*
+          Reading the common details of the employee
+         */
         Scanner sc=new Scanner(System.in);
         System.out.print("enter the emp name:");
         Emp_name=sc.next();
@@ -18,7 +23,9 @@ class Employee{
         System.out.print("enter the emp moblie.no:");
         Mobile_no=sc.nextInt();
     }
+    
     public void empDisplay(){
+        //Displaying the common deatiles of the employee
         System.out.println();
         System.out.println("emp name: "+Emp_name);
         System.out.println("emp id: "+Emp_id);
@@ -35,6 +42,7 @@ class Programmer extends Employee{
         this.BP=BP;
     }
     void display(){
+        //calculating and displaying the BP, DA, HRA, PF, club fund, GS, NS for Programmer
         System.out.println("BP:"+BP);
         System.out.println("DA:"+0.97*BP);
         System.out.println("HRA:"+0.10*BP);
@@ -51,7 +59,7 @@ class Assistant_Professor extends Employee{
         this.BP=BP;
     }
     void display(){
-
+        //calculating and displaying the BP, DA, HRA, PF, club fund, GS, NS for Assistant_Professor
         System.out.println("BP:"+BP);
         System.out.println("DA:"+0.97*BP);
         System.out.println("HRA:"+0.10*BP);
@@ -68,7 +76,7 @@ class Associate_Professor extends Employee{
         this.BP=BP;
     }
     void display(){
-
+        //calculating and displaying the BP, DA, HRA, PF, club fund, GS, NS for Associate_Professor
         System.out.println("BP:"+BP);
         System.out.println("DA:"+0.97*BP);
         System.out.println("HRA:"+0.10*BP);
@@ -85,7 +93,7 @@ class Professor extends Employee{
         this.BP=BP;
     }
     void display(){
-
+        //calculating and displaying the BP, DA, HRA, PF, club fund, GS, NS for Professor
         System.out.println("BP:"+BP);
         System.out.println("DA:"+0.97*BP);
         System.out.println("HRA:"+0.10*BP);
@@ -98,10 +106,12 @@ class Professor extends Employee{
 } 
 class Main{ 
 public static void main(String args[]){
+    //choose employee status
     System.out.println("\n 1.Programmer\n2.Assistant_Professor\n3.Associate_Professor\n4.Professor");
     Scanner input=new Scanner(System.in);
     System.out.print("Enter your option(1 to 4):");
     int op=input.nextInt();
+    //Displaying respective deatiles wrt input
     switch (op) {
         case 1:
            Programmer p=new Programmer(15000);

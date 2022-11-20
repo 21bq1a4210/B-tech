@@ -1,4 +1,8 @@
-import cv2 as cv
-#import sys
-img = cv.imread(r"F:\dOwnlodes\MyFlow\image (44).png",0)
-cv.imwrite(r"F:\Betch-2\Betch-2-1\Labs\AdvancedPythonLab\result.png",img)
+import sys
+img_path=input("enter img path:")
+img = cv.imread(img_path)
+if img is None:
+ sys.exit("Could not read the image.")
+cv.imshow("Image",img)
+cv.waitKey(10000)
+cv.destroyAllWindows()

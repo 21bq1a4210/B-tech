@@ -1,0 +1,1 @@
+Write a Python program to read and display image

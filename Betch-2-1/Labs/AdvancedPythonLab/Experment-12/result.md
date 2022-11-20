@@ -1,2 +1,9 @@
-Enter a file name:Aim.md
-{'f': ['find', 'file.'], 'o': ['out', 'of'], 'n': ['number'], 'l': ['lines,'], 'w': ['words,'], 'c': ['characters'], 'i': ['in'], 'a': ['a'], 'g': ['given'], 't': ['text']}
+Enter a file name:F:\Betch-2\Betch-2-1\Labs\AdvancedPythonLab\Experment-12\Aim.md
+a-['accumulate', 'all', 'alphabet']
+b-['buckets']
+f-['file.', 'from']
+g-['given']
+i-['into']
+r-['respective']
+t-['text', 'the']
+w-['words']

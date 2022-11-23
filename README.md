@@ -1,1 +1,1 @@
-# Betch-2
+# B-tech-2

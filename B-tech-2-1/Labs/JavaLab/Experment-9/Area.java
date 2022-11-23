@@ -33,7 +33,6 @@ class Triangle extends Shape{   //to calc area of Triangle shape
 class Circle extends Shape{ //to calc area of Circle shape  
     Circle(int radius){
         super.length=radius;
-        //super.breadth=base;
     }
     @Override
     public void Area(){

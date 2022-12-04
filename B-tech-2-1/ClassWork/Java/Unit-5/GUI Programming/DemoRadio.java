@@ -16,8 +16,8 @@ class RBDemo{
         frame.add(text);
 
         //Create the radio buttons.
-        JRadioButton plainrb = new JRadioButton("plain",true);
-        JRadioButton boldrb = new JRadioButton("bold",false);
+        JRadioButton plainrb = new JRadioButton("plain",false);
+        JRadioButton boldrb = new JRadioButton("bold",true);
         JRadioButton italicrb = new JRadioButton("italic",false);
         JRadioButton BIrb = new JRadioButton("bolditalic",false);
 

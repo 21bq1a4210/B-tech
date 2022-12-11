@@ -1,0 +1,7 @@
+Result:
+
+TestCase-1:
+enter ele:10 9 11 2 3 5 4
+Sorted array: [2, 3, 4, 5, 9, 10, 11]
+
+TestCase-2:

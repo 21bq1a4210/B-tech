@@ -1,0 +1,9 @@
+<Div> tag:
+Div tag is used to group two or more block level elements.
+The attributes mentioned in Div tag will apply to all the elements n the
+group.
+
+ <Span> tag:
+Span tag is used to group two or more inline elements.
+The attributes mentioned in Span tag will apply to all the elements n the
+group.

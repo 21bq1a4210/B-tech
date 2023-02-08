@@ -1,2 +1,4 @@
 body {background-color:red; margin:0px;}
 h1 {color: aqua;}
+marquee {color:violet; border: 10px; background-color: rgb(11, 123, 123);}
+table {color:blue; border: 10px; cell}

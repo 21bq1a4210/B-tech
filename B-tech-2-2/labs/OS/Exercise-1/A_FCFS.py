@@ -25,3 +25,16 @@ if __name__=='__main__':
     '''
     processes=[('p1',0,2),('p2',1,6),('p3',2,4)]
     FCFS(processes)
+    
+'''
+    Output:
+    Process ID	Arrival Time	Burst Time	Completion Time	TurnAround Time	Waiting Time
+    p1		0		2		2		2		0
+
+    p2		1		6		8		7		1
+
+    p3		2		4		12		10		6
+
+    Avg TurnAround Time:6.333333333333333
+    Avg Wating Time:2.3333333333333335
+'''

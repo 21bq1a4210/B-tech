@@ -1,6 +1,9 @@
 j1 = int(input("Enter the Capacity of Jug-1 in Liters: "))
 j2 = int(input("Enter the Capacity of Jug 2 in Liters: "))
 g = int(input("Enter the Required water in Jug-1:"))
+if j1<g:
+    print("Impossible request")
+    exit(0)
 def apply_rule(ch, x, y):
     # Rule 1 : Fill jug 1
     if ch == 1:
@@ -65,6 +68,7 @@ def apply_rule(ch, x, y):
       if y > 0:
         return x,0
       else:
+        print("=================================================================")
         print("Rule cannot be applier")
         return x,y
     # invalid choice 
@@ -75,24 +79,28 @@ x = y = 0
 print("================================STATUS===========================")
 print("The Initial State is:", end = " ")
 print(x, y)
+print("================================RULES==============================")
+print("Rule 1: Fill Jug-1")
+print("Rule 2: Fill Jug-2")
+print("Rule 3: Pour Some Water from Jug-1") # not used 
+print("Rule 4: Pour Some Water from Jug-2") # not used
+print("Rule 5: Empty Jug-1 ")
+print("Rule 6: Empty Jug-2 ")
+print("Rule 7: Transfer some water from Jug-1 to jug 2 until Jug-2  is full")
+print("Rule 8: Transfer some water from Jug-2 to jug 1 until Jug-1 is full")
+print("Rule 9: Transfer all water from Jug-1 to Jug-2")
+print("Rule 10: Transfer all water from Jug-2 to Jug-1")
+print("=================================================================")
 while(True):
   if (x==g):#or (y==g):
     print('***************  GOAL ACHIEVED! ******************')
+        print("=================================================================")
+
     break
   else:
-    print("================================RULES==============================")
-    print("Rule 1: Fill Jug-1")
-    print("Rule 2: Fill Jug-2")
-    print("Rule 3: Pour Some Water from Jug-1") # not used 
-    print("Rule 4: Pour Some Water from Jug-2") # not used
-    print("Rule 5: Empty Jug-1 ")
-    print("Rule 6: Empty Jug-2 ")
-    print("Rule 7: Transfer some water from Jug-1 to jug 2 until Jug-2  is full")
-    print("Rule 8: Transfer some water from Jug-2 to jug 1 until Jug-1 is full")
-    print("Rule 9: Transfer all water from Jug-1 to Jug-2")
-    print("Rule 10: Transfer all water from Jug-2 to Jug-1")
     ch = int(input("Enter rule to apply: "))
     x, y = apply_rule(ch, x, y)
     print("================================STATUS===========================")
     print("After Applyting the Rule, then the Current State is:", end = " ")
     print(x, y)
+    print("=================================================================")

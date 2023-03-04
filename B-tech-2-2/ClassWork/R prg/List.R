@@ -127,7 +127,7 @@ print(l)
 #merging 2 list:
 l1<-list(1,2,3)
 l2<-list(4,5,6)
-merge.default(l1,l2)
+merge.default(l2,l1)
 #output:
-# X1 X2 X3 X4 X5 X6
-# 1  1  2  3  4  5  6
+#   X4 X5 X6 X1 X2 X3
+#1  4  5  6  1  2  3

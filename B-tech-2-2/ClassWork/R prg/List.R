@@ -92,3 +92,42 @@ print(l$matrix)   #trougth namming
 # [,1] [,2] [,3]
 # [1,]    3    5    2
 # [2,]    9    1    3
+
+#Updating list elements:
+l=list(1,2)
+l[4]=4
+print(l)
+#output:
+# [[1]]
+# [1] 1
+# 
+# [[2]]
+# [1] 2
+# 
+# [[3]]
+# NULL
+# 
+# [[4]]
+# [1] 4
+
+#Updating list elements:
+l[1]<-NULL
+print(l)
+#output:
+# [[1]]
+# [1] 2
+# 
+# [[2]]
+# NULL
+# 
+# [[3]]
+# [1] 4
+
+#MERGING IN LIST:
+#merging 2 list:
+l1<-list(1,2,3)
+l2<-list(4,5,6)
+merge.default(l1,l2)
+#output:
+# X1 X2 X3 X4 X5 X6
+# 1  1  2  3  4  5  6

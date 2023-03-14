@@ -20,8 +20,8 @@ def getSlotMachineSpin(rows,cols,symbols):
 
 def printSlotMachine(columns):
     print(f"{columns[0][0]} | {columns[0][1]} | {columns[0][2]}  x1")
-    print("---- ----- ----")
+    print("------ ------- ------")
     print(f"{columns[1][0]} | {columns[1][1]} | {columns[1][2]}  x2")
-    print("---- ----- ----")
+    print("------ ------- ------")
     print(f"{columns[2][0]} | {columns[2][1]} | {columns[2][2]}  x3")
 

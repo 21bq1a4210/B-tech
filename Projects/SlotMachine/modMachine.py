@@ -19,9 +19,14 @@ def getSlotMachineSpin(rows,cols,symbols):
     return columns
 
 def printSlotMachine(columns):
+    '''for row in range(len(columns[0])):
+        for i,column in enumerate(columns):
+            if i!=len(columns)-1:
+                print(column[row], end='|')
+            else:
+                print(column[row])'''
     print(f"{columns[0][0]} | {columns[0][1]} | {columns[0][2]}  x1")
     print("---- ----- ----")
     print(f"{columns[1][0]} | {columns[1][1]} | {columns[1][2]}  x2")
     print("---- ----- ----")
-    print(f"{columns[2][0]} | {columns[2][1]} | {columns[2][2]}  x3")
-
+    print(f"{columns[2][0]} | {columns[2][1]} | {columns[2][2]}  x1")

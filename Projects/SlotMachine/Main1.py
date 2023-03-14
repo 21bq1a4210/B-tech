@@ -39,6 +39,7 @@ def main():
         else:
             print()
             bal+=spin(bal)
-    print(f"You left with ${bal}")
+    print(f"\nYou left with ${bal}")
     print("Come again when your free <3")
-main()
+    print("ﾉ(◕ヮ◕)ﾉ*:･ﾟ✧ Bye ")
+main() 

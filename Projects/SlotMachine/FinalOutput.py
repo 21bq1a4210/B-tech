@@ -22,4 +22,3 @@ def checkWinnings(columns,lines,bet,values):
         winning_lines.append(3)
             
     return winnings,winning_lines
-

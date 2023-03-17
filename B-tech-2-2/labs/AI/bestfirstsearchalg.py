@@ -15,7 +15,6 @@ def addEdge(u, v, weight):
     # Add edge u -> v with weight weight.
     adj[u].append(Node(v, weight))
 
-
 # Declaring the adjacency list
 adj = []
 # Greedy best first search algorithm function
@@ -62,7 +61,6 @@ def GBFS(h, V, src, dest):
             path.reverse()
             return path
         
-
         # Iterating over adjacents of 'currentNode'  and adding them to openList if
         # they are neither in openList or closeList.
         for node in adj[currentNode.node]:
@@ -78,8 +76,8 @@ def GBFS(h, V, src, dest):
 
     return []
 
-# Driver Code
 
+# Driver Code
 # The total number of vertices.
 V = 10
 ## Initializing the adjacency list
@@ -100,6 +98,5 @@ addEdge(7, 9, 5)
 h = [20, 22, 21, 10, 25, 24, 30, 5, 12, 0]
 path = GBFS(h, V, 0, 9)
 for i in range(len(path) - 1):
-    print(path[i], end = " -> ")
-
-print(path[(len(path)-1)])
+    print(path[i], end = " --> ")
+print(f'{path[(len(path)-1)]}.')

@@ -1,10 +1,75 @@
-MainWidget:
+GridLayoutExample:
+
+<GridLayoutExample@GridLayout>:
+    rows:3
+    cols:3
+    spacing:"10dp"
+    Button:
+        text:"A"
+        size_hint:.5,1
+
+    BoxLayoutExample:
+    Button:
+        text:"C"
+    Button:
+        text:"D"
+        size_hint:.5,1
+    Button:
+        text:"E"
+    Button:
+        text:"F"
+<AnchorLayoutExample>:
+    #special prop in AnchorLayout
+    #right, left, center
+    anchor_x: "center"
+    #bottom, top, center
+    anchor_y:"top"
+
+    BoxLayout:
+        size_hint:.2,.2
+        Button:
+            text:"A"
+        Button:
+            text:"B"
+
+<BoxLayoutExample>:
+
+    orientation: "horizontal"
+    Button:
+        text: "A"
+        #commented
+        #SIZE-PROP:size_hint:w,h ; size: w,h ; width: "__dp"
+        #size: "100dp", "60dp"
+
+        size_hint: .5,.5
+        #width:"100dp"
+        #height:"70dp"
+        # x, center_x, right
+        # y, center_y, top
+        pos_hint: {"center_y":.5}
+
+    BoxLayout:
+        orientation:"vertical"
+        spacing:"10dp"
+        Button:
+            text: "B1"
+        Button:
+            text: "B2"
+        Button:
+            text: "B3"
+        Button:
+            text: "B4"
+
+
+    Label:
+        text: "C"
 
 <MainWidget>:
     Button:
         text:"Hello"
         size: "100dp", "80dp"
         pos: "100dp","200dp"
+        color: 0, 1, 0, 1
     Label:
         text:"Hello2"
         size: "100dp", "80dp"

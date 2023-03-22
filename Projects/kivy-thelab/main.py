@@ -11,7 +11,7 @@ from kivy.uix.gridlayout import GridLayout
 class StackLayoutExample(StackLayout):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.orientation="tb-rl"
+        self.orientation="lr-tb"
         for i in range(1,101):
             dsize=dp(100)
             b=Button(

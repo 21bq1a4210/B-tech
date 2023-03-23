@@ -2,6 +2,11 @@ WidgetExample:
 
 <WidgetExample>:
     cols:3
+    ToggleButton:
+        text:"OFF"
+        on_state:root.onToggleButtonState(self)
+        size_hint:None,1
+        width:"100dp"
     Button:
         text:"Click Here"
         on_press:root.onButtonClick()

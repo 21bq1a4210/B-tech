@@ -9,30 +9,40 @@ from kivy.uix.button import Button
 from kivy.uix.anchorlayout import AnchorLayout
 from kivy.uix.gridlayout import GridLayout
 
+
 class WidgetExample(GridLayout):
-    my_text=StringProperty("HELLO")
+    my_text = StringProperty("HELLO")
+    ButtonCount = 0
+
     def onButtonClick(self):
-        self.my_text="<-- i am clicked"
-        print("Button clicked")
+        self.ButtonCount += 1
+        self.my_text = f"{self.ButtonCount}"
+        # print("Button clicked")
+
+
 class StackLayoutExample(StackLayout):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.orientation="lr-tb"
-        for i in range(1,101):
-            dsize=dp(100)
-            b=Button(
+        self.orientation = "lr-tb"
+        for i in range(1, 101):
+            dsize = dp(100)
+            b = Button(
                 text=f"{i}",
-                size_hint=(None,None),
-                size=(dsize,dsize)
+                size_hint=(None, None),
+                size=(dsize, dsize)
             )
             self.add_widget(b)
+
+
 class AnchorLayoutExample(AnchorLayout):
     pass
+
 
 '''
 class GridLayoutExample(GridLayout):
     pass
 '''
+
 
 class BoxLayoutExample(BoxLayout):
     '''def __init__(self, **kwargs):
@@ -47,6 +57,7 @@ class BoxLayoutExample(BoxLayout):
         self.add_widget(b3)
     '''
 
+
 class MainWidget(Widget):
     pass
 
@@ -54,5 +65,6 @@ class MainWidget(Widget):
 class TheLabApp(App):
     pass
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     TheLabApp().run()

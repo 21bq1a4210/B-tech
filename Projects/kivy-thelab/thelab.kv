@@ -30,8 +30,14 @@ WidgetExample:
         value:50
         on_value:root.onSliderValue(self)
         orientation:"vertical"
-    Label:
-        text:str(int(my_slider.value))
+    BoxLayout:
+        orientation:"vertical"
+        Label:
+            text:str(int(my_slider.value))
+        ProgressBar:
+            max:100
+            value:my_slider.value
+            size_hint:1,None
 
 <PageLayoutExample@PageLayout>:
     StackLayoutExample:

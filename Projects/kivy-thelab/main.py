@@ -1,7 +1,7 @@
 import kivy
 from kivy.app import App
 from kivy.metrics import dp
-from kivy.properties import StringProperty
+from kivy.properties import StringProperty, BooleanProperty
 from kivy.uix.stacklayout import StackLayout
 from kivy.uix.widget import Widget
 from kivy.uix.boxlayout import BoxLayout
@@ -13,7 +13,7 @@ from kivy.uix.gridlayout import GridLayout
 class WidgetExample(GridLayout):
     my_text = StringProperty("HELLO")
     ButtonCount = 0
-    count_enabled=False
+    count_enabled= BooleanProperty(False)
     def onButtonClick(self):
         if self.count_enabled==True:
             self.ButtonCount += 1

@@ -10,6 +10,7 @@ WidgetExample:
     Button:
         text:"Click Here"
         on_press:root.onButtonClick()
+        disabled: not root.count_enabled
     Label:
         text:root.my_text
         font_name: "fonts/Lcd.ttf"

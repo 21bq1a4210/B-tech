@@ -20,6 +20,19 @@ WidgetExample:
         on_active:root.onActive(self)
         size_hint:None,1
         width:"100dp"
+        id: on_active
+        active:True
+    Slider:
+        disabled:not on_active.active
+        id: my_slider
+        min:0
+        max:100
+        value:50
+        on_value:root.onSliderValue(self)
+        orientation:"vertical"
+    Label:
+        text:str(int(my_slider.value))
+
 <PageLayoutExample@PageLayout>:
     StackLayoutExample:
     ScrollViewExample:

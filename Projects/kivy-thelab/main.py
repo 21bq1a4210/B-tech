@@ -27,6 +27,9 @@ class WidgetExample(GridLayout):
         else:
             widget.text="ON"
             self.count_enabled=True
+    def onActive(self,widget):
+        print(f"{widget.active}")
+
 
 class StackLayoutExample(StackLayout):
     def __init__(self, **kwargs):

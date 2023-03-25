@@ -15,6 +15,7 @@ class WidgetExample(GridLayout):
     ButtonCount = 0
     count_enabled= BooleanProperty(False)
     #slide_val=StringProperty("slider value")
+    text_input_str=StringProperty("Foo")
     def onButtonClick(self):
         if self.count_enabled==True:
             self.ButtonCount += 1
@@ -35,6 +36,10 @@ class WidgetExample(GridLayout):
         #print(f"Slider:{widget.value}")
         #self.slide_val=f"{int(widget.value)}"
         pass
+    def onTextvalidate(self,widget):
+        self.text_input_str=widget.text
+        pass
+
 
 class StackLayoutExample(StackLayout):
     def __init__(self, **kwargs):

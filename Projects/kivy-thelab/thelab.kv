@@ -38,6 +38,16 @@ WidgetExample:
             max:100
             value:my_slider.value
             size_hint:1,None
+    BoxLayout:
+        orientation:"horizontal"
+
+        TextInput:
+            id:my_txt
+            text:"foo"
+            multiline:False
+            on_text_validate: root.onTextvalidate(self)
+        Label:
+            text:"Your name is:"+root.text_input_str
 
 <PageLayoutExample@PageLayout>:
     StackLayoutExample:
@@ -57,6 +67,7 @@ WidgetExample:
     #orientation:tb-rl"
     padding:("20dp","20dp","20dp","0dp")
     spacing:"20dp","20dp"
+
 <GridLayoutExample@GridLayout>:
     rows:3
     cols:3

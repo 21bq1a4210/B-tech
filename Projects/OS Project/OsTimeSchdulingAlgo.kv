@@ -1,0 +1,217 @@
+WindowManager:
+    MainWindow:
+    FCFS:
+    SJF:
+    RR:
+    Priority:
+
+<MainWindow>:
+    name:"main"
+    GridLayout:
+        cols:2
+
+        Label:
+            text:"FCFS"
+            font_size:32
+        Button:
+            text:"Click Here"
+            on_release:
+                app.root.current = "fcfs"
+                root.manager.transition.direction="left"
+
+        Label:
+            text:"SJF"
+            font_size:32
+        Button:
+            text:"Click Here"
+            on_release:
+                app.root.current = "sjf"
+                root.manager.transition.direction="left"
+
+        Label:
+            text:"RR"
+            font_size:32
+        Button:
+            text:"Click Here"
+            on_release:
+                app.root.current = "rr"
+                root.manager.transition.direction="left"
+
+        Label:
+            text:"Priority"
+            font_size:32
+        Button:
+            text:"Click Here"
+            on_release:
+                app.root.current = "priority"
+                root.manager.transition.direction="left"
+
+<FCFS>:
+    name:"fcfs"
+    BoxLayout:
+        orientation:"vertical"
+
+        Tabel:
+
+        GridLayout:
+            cols:2
+            size_hint:.5,None
+            pos_hint:{"right":.5}
+            Button:
+                text:"Submit"
+                on_press:root.clicked_fcfs(self)
+
+            Button:
+                text:"Go TO Main"
+                on_release:
+                    app.root.current = "main"
+                    root.manager.transition.direction="right"
+
+<SJF>:
+    name:"sjf"
+    BoxLayout:
+        orientation:"vertical"
+
+        Tabel:
+
+        GridLayout:
+            cols:2
+            size_hint:.5,None
+            pos_hint:{"right":.5}
+            Button:
+                text:"Submit"
+                #on_press:root.clicked_fcfs(self)
+
+            Button:
+                text:"Go TO Main"
+                on_release:
+                    app.root.current = "main"
+                    root.manager.transition.direction="right"
+
+<RR>:
+    name:"rr"
+    BoxLayout:
+        orientation:"vertical"
+
+        Tabel:
+
+        GridLayout:
+            cols:2
+            size_hint:.5,None
+            pos_hint:{"right":.5}
+            Button:
+                text:"Submit"
+                #on_press:root.clicked_fcfs(self)
+
+            Button:
+                text:"Go TO Main"
+                on_release:
+                    app.root.current = "main"
+                    root.manager.transition.direction="right"
+
+<Priority>:
+    name:"priority"
+    BoxLayout:
+        orientation:"vertical"
+
+        Tabel:
+
+        GridLayout:
+            cols:2
+            size_hint:.5,None
+            pos_hint:{"right":.5}
+            Button:
+                text:"Submit"
+                #on_press:root.clicked_fcfs(self)
+
+            Button:
+                text:"Go TO Main"
+                on_release:
+                    app.root.current = "main"
+                    root.manager.transition.direction="right"
+
+<Tabel>:
+    pid1_in:pid1
+    pid2_in:pid2
+    pid3_in:pid3
+
+    at1_in:at1
+    at2_in:at2
+    at3_in:at3
+
+    bt1_in:bt1
+    bt1_in:bt1
+    bt1_in:bt1
+
+    GridLayout:
+        cols:6
+        Label:
+            text:"Pid"
+        Label:
+            text:"AT"
+        Label:
+            text:"BT"
+        Label:
+            text:"CT"
+        Label:
+            text:"TAT"
+        Label:
+            text:"WT"
+
+        TextInput:
+            id:pid1
+            hint_text:"enter pid1"
+            multiline:False
+        TextInput:
+            id:at1
+            multiline:False
+        TextInput:
+            id:bt1
+            multiline:False
+        Label:
+            text:"0"
+            #text:root.ct1
+        Label:
+            text:"0"
+            #text:root.ct1
+        Label:
+            text:"0"
+            #text:root.ct1
+
+        TextInput:
+            id:pid2
+            multiline:False
+        TextInput:
+            id:at2
+            multiline:False
+        TextInput:
+            id:bt2
+            multiline:False
+        Label:
+            text:"0"
+            #text:root.ct1
+        Label:
+            text:"0"
+            #text:root.ct1
+        Label:
+            text:"0"
+            #text:root.ct1
+
+        TextInput:
+            id:pid3
+            multiline:False
+        TextInput:
+            id:at3
+            multiline:False
+        TextInput:
+            id:bt3
+            multiline:False
+        Label:
+            text:"0"
+            #text:root.ct1
+        Label:
+            text:"0"
+            #text:root.ct1
+        Label:
+            text:"0"
+            #text:root.ct1

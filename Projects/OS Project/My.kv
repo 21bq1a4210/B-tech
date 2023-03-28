@@ -1,0 +1,18 @@
+Mywdg:
+
+<Mywdg>:
+    Demo:
+    Button:
+        id:my_button
+        text:"Submit"
+        on_press:root.submit()
+
+<Demo>:
+    label:my_label
+    ti:my_ti
+    Label:
+        id:my_label
+        text:"Yo"
+    TextInput:
+        id:my_ti
+        on_text:root.on_text(self)

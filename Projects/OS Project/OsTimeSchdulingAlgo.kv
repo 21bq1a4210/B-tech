@@ -50,16 +50,20 @@ WindowManager:
     name:"fcfs"
     BoxLayout:
         orientation:"vertical"
-
+        Label:
+            text:"FCFS Schduling Algo"
+            font_size:46
+            size_hint:None,.25
+            pos_hint:{"right":.5}
         Tabel:
-
+            id:tabel
         GridLayout:
             cols:2
             size_hint:.5,None
             pos_hint:{"right":.5}
             Button:
                 text:"Submit"
-                on_press:root.clicked_fcfs(self)
+                on_press:root.clicked_fcfs(tabel.pid,tabel.at,tabel.bt,tabel.ct,tabel.tat,tabel.wt)
 
             Button:
                 text:"Go TO Main"
@@ -80,7 +84,7 @@ WindowManager:
             pos_hint:{"right":.5}
             Button:
                 text:"Submit"
-                #on_press:root.clicked_fcfs(self)
+                #on_press:root.clicked_sjf(self)
 
             Button:
                 text:"Go TO Main"
@@ -101,7 +105,7 @@ WindowManager:
             pos_hint:{"right":.5}
             Button:
                 text:"Submit"
-                #on_press:root.clicked_fcfs(self)
+                #on_press:root.clicked_rr(self)
 
             Button:
                 text:"Go TO Main"
@@ -124,7 +128,7 @@ WindowManager:
                 text:"Submit"
                 on_press:
                     #root.submit(self)
-                    root.clicked_fcfs(self)
+                    root.clicked_priority(self)
 
 
             Button:
@@ -134,87 +138,133 @@ WindowManager:
                     root.manager.transition.direction="right"
 
 <Tabel>:
-    pid1_in:pid1
-    pid2_in:pid2
-    pid3_in:pid3
+    pid:[pid1,pid2,pid3]
+    at:[at1,at2,at3]
+    bt:[bt1,bt2,bt3]
 
-    at1_in:at1
-    at2_in:at2
-    at3_in:at3
-
-    bt1_in:bt1
-    bt1_in:bt1
-    bt1_in:bt1
+    ct:[ct1,ct2,ct3]
+    tat:[tat1,tat2,tat3]
+    wt:[wt1,wt2,wt3]
 
     GridLayout:
         cols:6
         Label:
             text:"Pid"
+            font_size:42
         Label:
             text:"AT"
+            font_size:42
         Label:
             text:"BT"
+            font_size:42
         Label:
             text:"CT"
+            font_size:42
         Label:
             text:"TAT"
+            font_size:42
         Label:
             text:"WT"
+            font_size:42
 
         TextInput:
             id:pid1
-            hint_text:"enter pid1"
+            hint_text:"pid1"
+            font_size:42
+            halign:'center'
+            valign: 'middle'
             multiline:False
         TextInput:
             id:at1
+            hint_text:"at1"
+            font_size:42
+            halign:'center'
+            valign: 'middle'
             multiline:False
         TextInput:
             id:bt1
+            hint_text:"bt1"
+            font_size:42
+            halign:'center'
+            valign: 'middle'
             multiline:False
         Label:
+            id:ct1
             text:"0"
-            #text:root.ct1
+            font_size:42
         Label:
+            id:tat1
             text:"0"
-            #text:root.ct1
+            font_size:42
         Label:
+            id:wt1
             text:"0"
-            #text:root.ct1
+            font_size:42
 
         TextInput:
             id:pid2
+            hint_text:"pid2"
+            font_size:42
+            halign:'center'
+            valign: 'middle'
             multiline:False
         TextInput:
             id:at2
+            hint_text:"at2"
+            font_size:42
+            halign:'center'
+            valign: 'middle'
             multiline:False
         TextInput:
             id:bt2
+            hint_text:"bt2"
+            font_size:42
+            halign:'center'
+            valign: 'middle'
             multiline:False
         Label:
+            id:ct2
             text:"0"
-            #text:root.ct1
+            font_size:42
         Label:
+            id:tat2
             text:"0"
-            #text:root.ct1
+            font_size:42
         Label:
+            id:wt2
             text:"0"
-            #text:root.ct1
+            font_size:42
 
         TextInput:
             id:pid3
+            hint_text:"pid3"
+            font_size:42
+            halign:'center'
+            valign: 'middle'
             multiline:False
         TextInput:
             id:at3
+            hint_text:"at3"
+            font_size:42
+            halign:'center'
+            valign: 'middle'
             multiline:False
         TextInput:
             id:bt3
+            hint_text:"bt3"
+            font_size:42
+            halign:'center'
+            valign: 'middle'
             multiline:False
         Label:
+            id:ct3
             text:"0"
-            #text:root.ct1
+            font_size:42
         Label:
+            id:tat3
             text:"0"
-            #text:root.ct1
+            font_size:42
         Label:
+            id:wt3
             text:"0"
-            #text:root.ct1
+            font_size:42

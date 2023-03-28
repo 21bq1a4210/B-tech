@@ -1,15 +1,15 @@
 Mywdg:
 
 <Mywdg>:
-    Demo:demo
+    text: demo.ti.text
     Demo:
+        id:demo
     Button:
         id:my_button
         text:"Submit"
-        on_press:root.submit()
+        on_press:root.submit(demo.label)
 
 <Demo>:
-    id:demo
     label:my_label
     ti:my_ti
     Label:
@@ -17,4 +17,4 @@ Mywdg:
         text:"Yo"
     TextInput:
         id:my_ti
-        on_text:root.on_text(self)
+        #on_text:root.on_text(self)

@@ -9,9 +9,9 @@ class Demo(BoxLayout):
     pass
 
 class Mywdg(BoxLayout,Widget):
-    text = Demo.ti.text
-    def submit(self):
+    def submit(self,label):
         #print(self.ti.text)
+        label.text+= str("woo")
         print(self.text)
     pass
 

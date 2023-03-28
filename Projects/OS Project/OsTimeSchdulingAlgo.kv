@@ -122,7 +122,10 @@ WindowManager:
             pos_hint:{"right":.5}
             Button:
                 text:"Submit"
-                #on_press:root.clicked_fcfs(self)
+                on_press:
+                    #root.submit(self)
+                    root.clicked_fcfs(self)
+
 
             Button:
                 text:"Go TO Main"

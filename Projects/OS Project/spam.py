@@ -2,16 +2,17 @@ from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.widget import Widget
 
-class Mywdg(BoxLayout,Widget):
-    #text_inp = self.ti.text
-    def submit(self):
-        #print(self.ti.text)
-        print(self.text_inp)
-    pass
-
 class Demo(BoxLayout):
     def on_text(self):
         print(self.ti.text)
+        print(self.text)
+    pass
+
+class Mywdg(BoxLayout,Widget):
+    text = Demo.ti.text
+    def submit(self):
+        #print(self.ti.text)
+        print(self.text)
     pass
 
 class MyApp(App):

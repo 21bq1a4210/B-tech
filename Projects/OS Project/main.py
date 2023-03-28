@@ -10,11 +10,17 @@ class MainWindow(Screen):
 
 
 class Tabel(BoxLayout):
+    def values(self,obj):
+        print(obj)
     pass
 
 class FCFS(Screen):
     def clicked_fcfs(self,wdg):
-        print(self.pid1_in.text)
+        print(1)
+        pass
+    def submit(self,wdg):
+        print(2)
+        pass
 
 class SJF(Screen):
     pass

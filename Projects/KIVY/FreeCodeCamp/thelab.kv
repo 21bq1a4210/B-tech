@@ -1,14 +1,43 @@
-CanvasExample6:
+CanvasExample7:
 
 #:set s dp(200)
 
-<CanvasExample6>:
-    Button:
-        canvas.before:
-        #canvas:
+<CanvasExample7>:
+    Widget:
+        canvas:
+            Color:
+                rgb: 0,0,1
             Rectangle:
-        text:"A"
-        #pos:100,100
+                size:self.size
+    RelativeLayout:
+        canvas:
+            Color:
+                rgb: 1,1,1
+            Rectangle:
+                size:self.size
+    RelativeLayout:
+        canvas:
+            Color:
+                rgb: 1,0,0
+            Rectangle:
+                size:self.size
+
+<CanvasExample6>:
+    BoxLayout:
+        size:root.size
+        Widget:
+            canvas:
+                Color:
+                    rgb: 0,1,0
+                Rectangle:
+                    size:self.size
+        RelativeLayout:
+            canvas:
+                Color:
+                    rgb: 0,0,1
+                Rectangle:
+                    size:self.size
+                    #pos: self.pos
 
 <CanvasExample5>:
 

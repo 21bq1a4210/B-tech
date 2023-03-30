@@ -122,6 +122,10 @@ class StackLayoutExample(StackLayout):
 
 class CanvasExample6(Widget):
     pass
+
+class CanvasExample7(BoxLayout):
+    pass
+
 class AnchorLayoutExample(AnchorLayout):
     pass
 

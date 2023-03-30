@@ -7,8 +7,8 @@ from kivy.uix.widget import Widget
 
 class MainWindow(Screen):
     pass
-
-
+class FCFS_INFO(Screen):
+    pass
 class Tabel(BoxLayout):
     pass
 
@@ -23,7 +23,7 @@ class FCFS(Screen):
 
         for i in range(len(pid)):
             processes.append([int(pid[i].text), int(at[i].text), int(bt[i].text)])
-        print(processes)
+        #print(processes)
 
         for j in range(len(processes)):
             ct[j] = processes[j][2] + ct[j - 1]  # Completion Time (less than cumulative frequency of processes)
@@ -37,6 +37,27 @@ class FCFS(Screen):
         pass
 
 class SJF(Screen):
+    def clicked_sjf(self,pid,at,bt,ct_out,tat_out,wt_out):
+
+        processes = []
+
+        ct = [0] * len(pid)
+        tat = [0] * len(pid)
+        wt = [0] * len(pid)
+
+        for i in range(len(pid)):
+            processes.append([int(pid[i].text), int(at[i].text), int(bt[i].text)])
+        processes = sorted(processes, key=lambda x:x[1])
+
+        for j in range(len(processes)):
+            ct[j] = processes[j][2] + ct[j - 1]  # Completion Time (less than cumulative frequency of processes)
+            tat[j] = ct[j] - processes[j][1]  # Turn Around Time = Completion Time - Arrival Time
+            wt[j] = tat[j] - processes[j][2]    #Waiting Time = Turnaround time - Burst Time
+
+        for i in range(len(ct_out)):
+            ct_out[i].text=str(ct[i])
+            tat_out[i].text=str(tat[i])
+            wt_out[i].text=str(wt[i])
     pass
 
 class RR(Screen):

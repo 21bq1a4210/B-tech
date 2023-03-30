@@ -15,6 +15,7 @@ WindowManager:
             font_size:32
         Button:
             text:"Click Here"
+            font_size:32
             on_release:
                 app.root.current = "fcfs"
                 root.manager.transition.direction="left"
@@ -24,6 +25,7 @@ WindowManager:
             font_size:32
         Button:
             text:"Click Here"
+            font_size:32
             on_release:
                 app.root.current = "sjf"
                 root.manager.transition.direction="left"
@@ -33,6 +35,7 @@ WindowManager:
             font_size:32
         Button:
             text:"Click Here"
+            font_size:32
             on_release:
                 app.root.current = "rr"
                 root.manager.transition.direction="left"
@@ -41,6 +44,7 @@ WindowManager:
             text:"Priority"
             font_size:32
         Button:
+            font_size:32
             text:"Click Here"
             on_release:
                 app.root.current = "priority"
@@ -59,7 +63,7 @@ WindowManager:
         Tabel:
             id:tabel
         GridLayout:
-            cols:2
+            cols:3
             size_hint:.5,None
             pos_hint:{"right":.5}
             Button:
@@ -76,16 +80,21 @@ WindowManager:
     name:"sjf"
     BoxLayout:
         orientation:"vertical"
-
+        Label:
+            text:"SJF Schduling Algo"
+            font_size:46
+            size_hint:None,.25
+            pos_hint:{"right":.5}
+            color:0,0,1,1
         Tabel:
-
+            id:tabel
         GridLayout:
             cols:2
             size_hint:.5,None
             pos_hint:{"right":.5}
             Button:
                 text:"Submit"
-                #on_press:root.clicked_sjf(self)
+                on_press:root.clicked_sjf(tabel.pid,tabel.at,tabel.bt,tabel.ct,tabel.tat,tabel.wt)
 
             Button:
                 text:"Go TO Main"
@@ -97,7 +106,12 @@ WindowManager:
     name:"rr"
     BoxLayout:
         orientation:"vertical"
-
+        Label:
+            text:"RR Schduling Algo"
+            font_size:46
+            size_hint:None,.25
+            pos_hint:{"right":.5}
+            color:0,0,1,1
         Tabel:
 
         GridLayout:
@@ -118,7 +132,12 @@ WindowManager:
     name:"priority"
     BoxLayout:
         orientation:"vertical"
-
+        Label:
+            text:"Priority Schduling Algo"
+            font_size:46
+            size_hint:None,.25
+            pos_hint:{"right":.5}
+            color:0,0,1,1
         Tabel:
 
         GridLayout:

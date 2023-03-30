@@ -40,6 +40,8 @@ class WidgetExample(GridLayout):
         self.text_input_str=widget.text
         pass
 
+class CanvasExample1(Widget):
+    pass
 
 class StackLayoutExample(StackLayout):
     def __init__(self, **kwargs):

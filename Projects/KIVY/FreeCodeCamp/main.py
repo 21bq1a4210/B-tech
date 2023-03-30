@@ -1,5 +1,6 @@
 import kivy
 from kivy.app import App
+from kivy.graphics import Line, Color, Rectangle
 from kivy.metrics import dp
 from kivy.properties import StringProperty, BooleanProperty
 from kivy.uix.stacklayout import StackLayout
@@ -42,6 +43,35 @@ class WidgetExample(GridLayout):
 
 class CanvasExample1(Widget):
     pass
+
+class CanvasExample2(Widget):
+    pass
+
+class CanvasExample3(Widget):
+    pass
+
+class CanvasExample4(Widget):
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        with self.canvas:
+            Line(points=(100,100,400,500), width=2)
+            Color(0,1,0)
+            Line(circle=(400, 200, 80), width=2)
+            Line(rectangle=(700, 500, 150, 100), width=2)
+            self.rect=Rectangle(pos=(700, 200), size=(150,100))
+    def on_click(self):
+        #print("foo")
+        x, y = self.rect.pos
+        w, h = self.rect.size
+        inc = dp(10)
+        diff = self.width - (x+w)
+
+        if diff < inc:
+            inc = diff
+        x += inc
+        self.rect.pos = (100, 100)
+        self.rect.pos = (x, y)
+        pass
 
 class StackLayoutExample(StackLayout):
     def __init__(self, **kwargs):

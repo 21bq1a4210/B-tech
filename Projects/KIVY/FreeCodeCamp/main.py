@@ -120,7 +120,8 @@ class StackLayoutExample(StackLayout):
             )
             self.add_widget(b)
 
-
+class CanvasExample6(Widget):
+    pass
 class AnchorLayoutExample(AnchorLayout):
     pass
 

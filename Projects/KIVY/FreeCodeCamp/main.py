@@ -3,6 +3,7 @@ from kivy.app import App
 from kivy.graphics import Line, Color, Rectangle, Ellipse
 from kivy.metrics import dp
 from kivy.properties import StringProperty, BooleanProperty, Clock
+from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.stacklayout import StackLayout
 from kivy.uix.widget import Widget
 from kivy.uix.boxlayout import BoxLayout
@@ -10,8 +11,11 @@ from kivy.uix.button import Button
 from kivy.uix.anchorlayout import AnchorLayout
 from kivy.uix.gridlayout import GridLayout
 
-
-class WidgetExample(GridLayout):
+class WindowManager(ScreenManager):
+    pass
+class MainWindow(Screen):
+    pass
+class WidgetExample(Screen):
     my_text = StringProperty("HELLO")
     ButtonCount = 0
     count_enabled= BooleanProperty(False)
@@ -81,7 +85,7 @@ class CanvasExample5(Widget):
         self.vy = dp(3)
         with self.canvas:
             self.ball=Ellipse(pos=self.center, size=(self.ball_size, self.ball_size))
-        Clock.schedule_interval(self.update, 1/60)
+        Clock.schedule_interval(self.update, 1/100)
     def on_size(self, *args):
         #print("on size : "+str(self.width)+", "+str(self.height))
         self.ball.pos = (self.center_x-self.ball_size/2, self.center_y-self.ball_size/2)

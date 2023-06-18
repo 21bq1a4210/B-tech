@@ -18,6 +18,8 @@ seq=[]
 #             avil=[alloc[i][j]+avil[j] for j in range(m)]
 # print(seq)
 
+
+##prevenction
 while 0 in fin:
     dl=1
     for i in range(n):

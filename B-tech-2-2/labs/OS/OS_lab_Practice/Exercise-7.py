@@ -45,10 +45,42 @@ def sstf(req,head):
         cops=nr
     return td,move
 
-td,move=sstf(req,head)
+# td,move=sstf(req,head)
+# print(td,move)
+# plot_move(move)
+
+#c) SCAN
+def scan(req,head,d):
+    td=0
+    move=[]
+    cpos=head
+    
+    lr=[l for l in req if l<cpos]
+    lr.sort(reverse=True)
+    lr.insert(len(lr),0)
+    
+    rr=[r for r in req if r>cpos]
+    rr.sort()
+    #rr.insert(len(rr),199)
+    
+    if d==0:
+        for r in lr:
+            dis=abs(cpos-r)
+            td+=dis
+            move.append((cpos,r))
+            cpos=r
+        
+        for r in rr:
+            dis=abs(cpos-r)
+            td+=dis
+            move.append((cpos,r))
+            cpos=r
+    #else
+    return td,move
+
+td,move=scan(req,head,d=0)
 print(td,move)
 plot_move(move)
-#c) SCAN
 #d) C-SCAN
 #e) LOOK
 #f) C-LOOK

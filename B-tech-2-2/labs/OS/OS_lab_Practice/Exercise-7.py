@@ -3,7 +3,7 @@ head=50
 
 import matplotlib.pyplot as plt
 def plot_move(move):
-    plt.plot(range(len(move)),[m[0] for m in move], 'bo-')
+    #plt.plot(range(len(move)),[m[0] for m in move], 'bo-')
     plt.plot(range(len(move)),[m[1] for m in move], 'ro-')
     plt.title("Name of Algo..")
     plt.xlabel("Request")
@@ -11,6 +11,7 @@ def plot_move(move):
     plt.legend(['Start Position', 'Disk Requests'])
     plt.grid(True)
     plt.show()
+    
 #a) FCFS
 def fcfs(req,head):
     td=0
@@ -23,10 +24,30 @@ def fcfs(req,head):
         cpos=r
     return td,move
 
-td,move=fcfs(req,head)
+# td,move=fcfs(req,head)
+# print(td,move)
+# plot_move(move)
+
+
+#b) SSTF
+def sstf(req,head):
+    td=0
+    move,rreq=[],req[:]
+    cpos=head
+    
+    while rreq:
+        dis=[abs(cpos-r) for r in rreq]
+        sdi=dis.index(min(dis))
+        nr=rreq.pop(sdi)
+        d=dis[sdi]
+        td+=d
+        move.append((cpos,nr))
+        cops=nr
+    return td,move
+
+td,move=sstf(req,head)
 print(td,move)
 plot_move(move)
-#b) SSTF
 #c) SCAN
 #d) C-SCAN
 #e) LOOK

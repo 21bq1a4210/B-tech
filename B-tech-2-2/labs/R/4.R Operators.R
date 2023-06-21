@@ -105,7 +105,41 @@ print(!v1) #output: [1] FALSE  TRUE FALSE FALSE
 print(!v2) #output: [1] FALSE FALSE  TRUE FALSE
 
 'The logical operator && and || considers only the first element of the vectors and give a vector of single element as output.'
+v1 <- c(0)
+v2 <- c(0)
 
 #4.&&
 'Called Logical AND operator. Takes first element of both the vectors and gives the TRUE only if both are TRUE.'
 print(v1&&v2)
+
+
+#5.|	Called Logical OR operator. Takes first element of both the vectors and gives the TRUE if one of them is TRUE.|
+print(v1||v2)
+
+#Assignment Operators:
+'
+1.  Called Left Assignment
+2.  Called Right Assignment
+'
+
+#1. Called Left Assignment
+v1<-c(3,1,TRUE,2+3i)
+v2<<-c(3,1,TRUE,2+3i)
+v3=c(3,1,TRUE,2+3i)
+
+cat(v1,'\n',v2,'\n',v3)
+'output:
+3+0i 1+0i 1+0i 2+3i 
+ 3+0i 1+0i 1+0i 2+3i 
+ 3+0i 1+0i 1+0i 2+3i
+'
+
+#2. Called Right Assignment
+c(3,1,TRUE,2+3i) -> v1
+c(3,1,TRUE,2+3i) ->> v2 
+print(v1)
+print(v2)
+'output:
+
+'
+

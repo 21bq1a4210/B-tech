@@ -85,6 +85,8 @@ print(v1!=v2) #output: TRUE  TRUE  TRUE FALSE
 1. &
 2. |
 3. !
+4. &&
+5. ||
 '
 v1<-c(3,0,TRUE,2+3i)
 v2<-c(4.23,1,FALSE,2+5i)
@@ -101,3 +103,9 @@ print(v1|v2) #output: [1] TRUE TRUE TRUE TRUE
 'Takes each element of the vector and gives the opposite logical value.'
 print(!v1) #output: [1] FALSE  TRUE FALSE FALSE
 print(!v2) #output: [1] FALSE FALSE  TRUE FALSE
+
+'The logical operator && and || considers only the first element of the vectors and give a vector of single element as output.'
+
+#4.&&
+'Called Logical AND operator. Takes first element of both the vectors and gives the TRUE only if both are TRUE.'
+print(v1&&v2)

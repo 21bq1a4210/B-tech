@@ -140,6 +140,36 @@ c(3,1,TRUE,2+3i) ->> v2
 print(v1)
 print(v2)
 'output:
-
+[1] 3+0i 1+0i 1+0i 2+3i
+[1] 3+0i 1+0i 1+0i 2+3i
 '
 
+#Miscellaneous Operators
+'
+1. :
+2. %in%
+3. %*%
+'
+#1.(:)
+'Colon operator. It creates the series of numbers in sequence for a vector.'
+v<-c(2:10)
+print(v) #output: [1]  2  3  4  5  6  7  8  9 10
+
+#2.(%in%)
+'This operator is used to identify if an element belongs to a vector.'
+v1<-8
+v2<-12
+t<-1:10
+print(v1 %in% t) #output: TRUE
+print(v2 %in% t) #output: FALSE
+
+#3.(%*%)
+'This operator is used to multiply a matrix with its transpose.'
+M = matrix( c(2,6,5,1,10,4), nrow = 2,ncol = 3,byrow = TRUE)
+t = M %*% t(M)
+print(t)
+'output:
+      [,1] [,2]
+[1,]   65   82
+[2,]   82  117
+'

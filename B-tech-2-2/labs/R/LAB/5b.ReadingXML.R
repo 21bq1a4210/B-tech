@@ -1,0 +1,13 @@
+libary('XML')
+library('methods')
+data<-xmlParse(file='Sample.xml')
+print(data)
+'OUTPUT:
+1
+Alia
+620
+IT
+2
+Brijesh
+440
+'

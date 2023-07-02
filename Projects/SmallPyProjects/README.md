@@ -43,3 +43,5 @@ get_stock_price(symbols)
 This line calls the `get_stock_price` function, passing the symbols list as an argument. This starts the process of continuously fetching and printing the stock prices for the specified symbols.
 
 Overall, this code demonstrates how to use the `yfinance` library to fetch real-time stock prices for multiple symbols. It continuously monitors the prices and provides updates every minute. You can modify the `symbols` list and customize the code according to your needs, such as changing the time interval or adding more error handling.
+
+Follow me on [LinkedIn](https://www.linkedin.com/in/sarath-chandra-bandreddy-07393b1aa/)

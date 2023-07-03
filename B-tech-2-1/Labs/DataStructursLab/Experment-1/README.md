@@ -60,4 +60,4 @@ obj = BinarySearch(arr, key)
 ```
 This line creates an instance of the `BinarySearch` class, passing the `arr` and `key` values as arguments to the constructor. The resulting object is assigned to the variable `obj`.
 
-This code aims to perform a binary search on the `arr` list for the `key` value and print the result. However, there are a few
+This code aims to perform a binary search on the `arr` list for the `key` value and print the result.

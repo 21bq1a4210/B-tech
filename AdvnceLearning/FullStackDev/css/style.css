@@ -11,7 +11,7 @@ body {
     background-size: cover;
 }
 
-h2, p:hover {
+h2, p {
     color: rgb(255, 0, 0);
     text-align: center;
     border: 5px solid rgba(0, 200, 255, 0.99);
@@ -69,4 +69,15 @@ element + element
 
  #div2{
     background-color: fuchsia;
+ }
+
+ /* text and fonts */
+
+ p {
+    text-transform: uppercase;
+    line-height: 30px;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 70%;
+    font-family: 'Kalam', cursive;;
  }

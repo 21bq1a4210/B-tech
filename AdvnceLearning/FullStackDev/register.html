@@ -4,20 +4,36 @@
         <title>Register</title>
     </head>
     <body>
-        <form style="font-size: small;">
-            First Name:<input type="text"> <br>
-            Last Name:<input type="text"> <br>
-            Email: <input type="email"> <br>
-            DOB: <input type="date"> <br>
+        <form >
+            First Name:<input type="text" name="fn"> <br>
+            Last Name:<input type="text" name="sn"> <br>
+            Email: <input type="email" name="em"> <br>
+            Password: <input type="password" name="passw" min="6"> <br>
+            DOB: <input name="dob" type="date"> <br>
             Gender: <br>
-                <input type="radio" name="gender">Male <br>
-                <input type="radio" name="gender">Female <br>
-                <input type="radio" name="gender">Others <br>
+                <input name="gender" type="radio" name="gender">Male <br>
+                <input name="gender" type="radio" name="gender">Female <br>
+                <input name="gender" type="radio" name="gender">Others <br>
             Pets: <br>
-                <input type="checkbox">Cat <br>
-                <input type="checkbox">Dog <br>
-            <input type="submit" value="Register">
+                <input name="pet" type="checkbox">Cat <br>
+                <input name="pet" type="checkbox">Dog <br>
+            Cars: <br>
+                <select name="cars">
+                    <option name="car" value="car1">Volvo</option>
+                    <option name="car" value="car2">Audi</option>
+                    <option name="car" value="car3">BMW</option>
+                    <option name="car" value="car4">Benz</option>
+                </select>
+                <input type="submit" value="Register">
             <input type="reset">
         </form>
     </body>
 </html>
+<!-- 
+?
+fn=fenvkj
+&sn=.%2Cmvlrkmkmaebwjb&em=mvbnm%40jiklj&passw=%2Cnkjnjk
+&dob=2023-07-13
+&gender=on
+&pet=on
+&pet=on -->

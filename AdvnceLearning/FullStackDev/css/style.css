@@ -81,3 +81,13 @@ element + element
     font-size: 70%;
     font-family: 'Kalam', cursive;;
  }
+
+ /* image */
+ img{
+    float: right;
+ }
+
+ footer{
+    clear: both;
+    text-align: center;
+ }

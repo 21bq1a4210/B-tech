@@ -2,22 +2,34 @@
     property: value;
 } */
 
+* { 
+    text-align: right;
+}
+
 body {
     background-image: url(luffy-gare-5.jpg);   
     background-size: cover;
 }
 
-h2 {
-    color: rgb(255, 123, 0);
+h2, p:hover {
+    color: rgb(255, 0, 0);
     text-align: center;
-    border: 5px solid blue;
+    border: 5px solid rgba(0, 200, 255, 0.99);
+    /* background-color: aqua; */
+    cursor: pointer;
+}
+
+h2 p {   /* p inside h2*/
+    color: rgb(255, 0, 0);
+    text-align: center;
+    border: 5px solid rgba(0, 200, 255, 0.99);
     /* background-color: aqua; */
     cursor: pointer;
 }
 
 
 p {
-    color: rgb(205, 0, 0);
+    color: rgb(205, 0, 0) !important;
 }
 
 li{
@@ -25,3 +37,36 @@ li{
     display: inline;
 }
 /* css-tricks */
+
+/* 
+css at the most basic level it inndicated that the order of css rules matter.
+
+.class
+#id
+*
+element 
+element, element
+element element 
+element > element 
+element + element 
+:hover
+:last-child
+:first-child
+!important (not recommended)
+ */
+
+ .webtext:last-child {
+    color: chartreuse;
+ }
+
+ .active{
+    color: darkviolet;
+ }
+ 
+ #div1{
+    background: blanchedalmond;
+ }
+
+ #div2{
+    background-color: fuchsia;
+ }

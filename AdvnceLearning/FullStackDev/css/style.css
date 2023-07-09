@@ -91,3 +91,14 @@ element + element
     clear: both;
     text-align: center;
  }
+
+ /* Box Model */
+ .boxmodel {
+    border: 5px solid red;
+    color: aliceblue;
+    display: inline-block;
+    padding: 5px 20px 5px 20px;
+    margin:0px 20px;
+    width: auto;
+    height: auto;
+ }

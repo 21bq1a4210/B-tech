@@ -1,0 +1,14 @@
+.added-border table, th, tr, td, caption {
+    border: 1px solid black;
+}
+
+.collapsed-border table,th,tr,td,caption{
+    border: 1px, solid black;
+    border-collapse: collapse;
+}
+
+.style-table-border table, th, td, caption{
+    border: 1px solid white;
+    border-collapse: collapse;
+    background-color: aquamarine;
+}

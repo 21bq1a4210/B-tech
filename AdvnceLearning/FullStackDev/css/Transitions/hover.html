@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <title>hover</title>
+    <style>
+        .wrap{
+            margin: 50px;
+        }
+
+        .container{
+            display: inline;
+            width: 300px;
+        }
+
+        h1{
+            color: black;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 20px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .box{
+            border-radius: 5px;
+            height: 40px;
+            margin: 50px auto;
+            width: 80px;
+
+            .wrap:hover &{
+            transform: scale(2);
+            }
+        }
+
+        .box1{
+            background: mediumaquamarine;
+        }
+
+        .box2{
+            background: #2b3f53;
+            transition: all 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <h1>With-out transitions</h1>
+            <div class="box1 box"></div>
+        </div>
+        <div class="container">
+            <h1>With transition</h1>
+            <div class="box2 box"></div>
+        </div>
+    </div>
+</body>
+</html>

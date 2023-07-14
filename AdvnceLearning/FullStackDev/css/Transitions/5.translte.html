@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        .sqr1 {
+            background-color: aqua;
+            border-radius: 3px;
+            height: 200px;
+            margin: 100px;
+            position: absolute;
+            transition: transform 0.8s;
+            width: 200px;
+        }
+
+        .sqr2 {
+            background-color: cadetblue;
+            border-radius: 3px;
+            height: 200px;
+            margin: 100px;
+            transition: transform 0.8s;
+            position: absolute;
+            width: 200px;
+            
+            &:hover {
+                transform: translate(35px, 35px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sqr1"></div>
+    <div class="sqr2"></div>
+</body>
+</html>

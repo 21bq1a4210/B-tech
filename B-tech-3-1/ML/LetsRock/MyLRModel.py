@@ -1,11 +1,16 @@
 import numpy as np
+import pandas as pd
 from matplotlib import pyplot as plt
 
+size = [2104, 1000, 1416, 1534, 852, 3210, 3000, 2523, 2750]
+price = [400, 150, 232, 351, 176, 870, 720, 525, 623]
+
+array = np.array([size, price])
 if __name__ == "__main__":
     # x_train is the i/p variable (size in 1000 square feet)
     # y_train is the target (price in 1000 of $)
-    x_train = np.array([1.0, 2.0])
-    y_train = np.array([300.0, 500.0])
+    x_train = array[0]
+    y_train = array[1]
     print(f"x_train = {x_train}")
     print(f"y_train = {y_train}")
     print()
@@ -36,8 +41,8 @@ if __name__ == "__main__":
     plt.xlabel('Size (1K sqft)')
     plt.show()
 
-    w = 200
-    b = 100
+    w = .1987
+    b = .0264
     print(f"w: {w}")
     print(f"b: {b}")
 
@@ -51,6 +56,7 @@ if __name__ == "__main__":
         f_wb = np.zeros(m)
         for i in range(m):
             f_wb[i] = w * x[i] + b
+        print(f'f_wb is :{f_wb}')
         return f_wb
 
     tmp_f_wb = compute_model_output(x_train, w, b)

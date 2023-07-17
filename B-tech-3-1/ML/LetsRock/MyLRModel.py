@@ -42,7 +42,7 @@ if __name__ == "__main__":
     plt.show()
 
     w = .1987
-    b = .0264
+    b = len(size)+len(price)-2
     print(f"w: {w}")
     print(f"b: {b}")
 

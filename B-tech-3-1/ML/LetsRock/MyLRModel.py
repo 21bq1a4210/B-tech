@@ -1,11 +1,50 @@
 import numpy as np
-import pandas as pd
 from matplotlib import pyplot as plt
 
 size = [2104, 1000, 1416, 1534, 852, 3210, 3000, 2523, 2750]
 price = [400, 150, 232, 351, 176, 870, 720, 525, 623]
-
 array = np.array([size, price])
+
+
+def compute_model_output(x, w, b):
+    '''
+    :param x: x(ndarray (m,)): Data, m examples
+    :param w, b(scalar): model parameters
+    :return: y (ndarray (m,)): target values
+    '''
+    m = x.shape[0]
+    f_wb = np.zeros(m)
+    for i in range(m):
+        f_wb[i] = w * x[i] + b
+    print(f'f_wb is :{f_wb}')
+    return f_wb
+
+
+def calc_w_b(x, y):
+    '''
+    :param x: x_train is the i/p variable
+    :param y: y_train is the target
+    :return: w, b
+
+    Regression Eq of Y on X:
+        Σy = w * Σx + n * b
+        Σxy = w * Σx^2 + b * Σx
+    '''
+
+    sum_x = np.sum(x)
+    sum_y = np.sum(y)
+    sum_xy = np.sum(x * y)
+    sum_x_2 = np.sum(x ** 2)
+    n = len(x)
+
+    A = np.array([[n, sum_x], [sum_x, sum_x_2]])
+    B = np.array([sum_y, sum_xy])
+
+    # Solve the system of equations
+    solution = np.linalg.solve(A, B)
+
+    return solution
+
 if __name__ == "__main__":
     # x_train is the i/p variable (size in 1000 square feet)
     # y_train is the target (price in 1000 of $)
@@ -41,24 +80,7 @@ if __name__ == "__main__":
     plt.xlabel('Size (1K sqft)')
     plt.show()
 
-    w = .1987
-    b = len(size)+len(price)-2
-    print(f"w: {w}")
-    print(f"b: {b}")
-
-    def compute_model_output(x, w, b):
-        '''
-        :param x: x(ndarray (m,)): Data, m examples
-        :param w, b(scalar): model parameters
-        :return: y (ndarray (m,)): target values
-        '''
-        m = x.shape[0]
-        f_wb = np.zeros(m)
-        for i in range(m):
-            f_wb[i] = w * x[i] + b
-        print(f'f_wb is :{f_wb}')
-        return f_wb
-
+    b, w = calc_w_b(x_train, y_train)
     tmp_f_wb = compute_model_output(x_train, w, b)
 
     # Plot our model prediction

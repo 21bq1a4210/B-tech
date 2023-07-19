@@ -1,8 +1,8 @@
 import numpy as np
 from matplotlib import pyplot as plt
 
-size = [2104, 1000, 1416, 1534, 852, 3210, 3000, 2523, 2750]
-price = [400, 150, 232, 351, 176, 870, 720, 525, 623]
+size = [2104, 1000, 1416, 1534, 852, 3000, 2523, 2750]
+price = [460, 150, 232, 351, 176, 720, 525, 623]
 array = np.array([size, price])
 
 
@@ -73,7 +73,7 @@ if __name__ == "__main__":
     # Plot the data points
     plt.scatter(x_train, y_train, marker='x', c='r')
     # set the title
-    plt.title("Houseing Prices")
+    plt.title("Housing Prices")
     # set the y-axis label
     plt.ylabel("Price (in 1Ks of $)")
     # set the x-axis label

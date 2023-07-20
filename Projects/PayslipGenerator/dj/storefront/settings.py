@@ -132,6 +132,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+
+#Doesent work run build fun in react-js and need to change path
 STATICFILES_DIR = [
         os.path.join(BASE_DIR,'react-js/public')
     ]

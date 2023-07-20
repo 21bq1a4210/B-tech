@@ -1,0 +1,7 @@
+.login-body{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(https://www.vvitguntur.com/images/slider3/vvit_drone_4k-min.jpeg);
+    height:fit-content;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

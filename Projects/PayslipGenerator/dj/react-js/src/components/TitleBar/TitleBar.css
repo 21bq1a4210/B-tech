@@ -1,0 +1,24 @@
+.title-card{
+    height: 100px;
+    width: 100%;
+    background-color: #e87e6a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title-logo{
+    background: url(../../../img/logo-2.png);
+    height: 90px;
+    width: 150px;
+    background-position: center;
+    background-size: cover;
+    filter: drop-shadow(2px 2px 5px #0d0d0d);
+}
+
+
+@media(max-width : 576px) {
+    .title-card{
+        max-height: 110px;
+        width: 100%;
+    }
+}

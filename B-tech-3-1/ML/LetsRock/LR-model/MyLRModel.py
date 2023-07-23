@@ -45,6 +45,29 @@ def calc_w_b(x, y):
 
     return solution
 
+def compute_cost(x, y, w, b):
+    '''
+        J(w,b) = (1/2m)*((i=0Σm-1)f(x)-y)**2
+    '''
+    '''
+    :param x: (ndarray (m,)): Data, m examples
+    :param y: (ndarray (m,)): target values
+    :param w, b: (scalar): model parameters
+    :return: total_cost (float): The cost of using w,b as the parameters for linear regression
+               to fit the data points in x and y
+    '''
+
+    # no.of training examples
+    m = x.shape[0]
+    cost_sum = 0
+
+    for i in range(m):
+        f_wb = w * x[i] + b
+        cost = (f_wb - y[i]) ** 2
+        cost_sum += cost
+    total_cost = (1/(2*m)) * cost_sum
+    return total_cost
+
 if __name__ == "__main__":
     # x_train is the i/p variable (size in 1000 square feet)
     # y_train is the target (price in 1000 of $)
@@ -81,6 +104,7 @@ if __name__ == "__main__":
     plt.show()
 
     b, w = calc_w_b(x_train, y_train)
+    print(f"cost function of {w, b} is {compute_cost(x_train, y_train, w, b)}")
     tmp_f_wb = compute_model_output(x_train, w, b)
 
     # Plot our model prediction

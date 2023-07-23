@@ -7,6 +7,7 @@ from django.conf.urls import include
 urlpatterns =[
     path('hello/',views.say_hello),
     path('hello/next/',views.upload_file,name='next'),
+    path('', views.home),
 ]
 if settings.DEBUG:
     import debug_toolbar

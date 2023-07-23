@@ -24,6 +24,8 @@ def upload_file(request):
         form=upload()
     return render(request, 'upload.html')
     pythoncom.CoUninitialize()
-    
+
+def home(request):
+    return render(request, 'index.html')
 def exceldata():
     return data

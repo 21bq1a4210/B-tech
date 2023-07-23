@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        div#change-color{
+            width: 150px;
+            height: 150px;
+            background-color: aqua;
+            animation-name: color;
+            animation-duration: 4s;
+        }
+
+        @keyframes color {
+            from {background-color: aquamarine;}
+            to {background-color: yellow;}
+        }
+
+        div#mydiv{
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            animation-name: example;
+            position: relative;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes example {
+            0% {background-color: red; left: 0px; top: 0px;}
+            25% {background-color: yellow; left: 200px; top: 0px;} 
+            50% {background-color: blue; left: 200px; top: 200px;}
+            75% {background-color: rgb(208, 0, 255); left: 0px; top:200px}
+            100% {background-color: greenyellow; left: 0px; top: 0px;}           
+        }
+    </style>
+</head>
+<body>
+    <div id="change-color"></div>
+    <hr>
+    <div id="mydiv"></div>
+</body>
+</html>

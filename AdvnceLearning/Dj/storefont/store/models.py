@@ -14,7 +14,7 @@ class Product(models.Model):
     inventory = models.IntegerField()
     last_update = models.DateTimeField(auto_now=True)
     collections = models.ForeignKey(Collection, on_delete=models.PROTECT)
-    promotions = models.ManyToManyRel(Promotion)
+    promotions = models.ManyToManyField(Promotion)
 
 class Customer(models.Model):
     MEMBERSHIP_BRONZE = 'B'  # makes easy to change in the feature
@@ -40,9 +40,9 @@ class Order(models.Model):
     PAYMENT_STATUS_FAILED = 'F'
 
     PAYMENT_STATUS_CHOICE = [
-        PAYMENT_STATUS_PENDING, 'Pending',
-        PAYMENT_STATUS_COMPLETE, 'Complete',
-        PAYMENT_STATUS_FAILED, 'Failed'
+        (PAYMENT_STATUS_PENDING, 'Pending'),
+        (PAYMENT_STATUS_COMPLETE, 'Complete'),
+        (PAYMENT_STATUS_FAILED, 'Failed')
     ]
 
     placed_at = models.DateTimeField(auto_now_add=True)

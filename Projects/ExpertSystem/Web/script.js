@@ -23,6 +23,10 @@ function sendMessage() {
   }
 }
 
+function botMessage() {
+  const message = messageInput.value.trim();
+}
+
 // Function to append a new message to the chat output
 function appendMessage(sender, message) {
   const messageElement = document.createElement('div');
@@ -43,3 +47,5 @@ function appendMessage(sender, message) {
   // Scroll to the bottom of the chat output
   chatOutput.scrollTop = chatOutput.scrollHeight;
 }
+
+// Path: script.js  (continued) 

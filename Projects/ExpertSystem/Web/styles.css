@@ -41,3 +41,8 @@ body {
     cursor: pointer;
   }
   
+  #send-btn:hover {
+    background-color: #46a049;
+  }
+
+  /* Path: index.js */

@@ -5,6 +5,10 @@ import speech_recognition as sr # internet needed
 engine =pyttsx3.init() #Ava
 engine.setProperty('voice', 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0')
 engine.setProperty('rate', 143)
+engine.setProperty('word_rate', 150)
+engine.setProperty('volume', 0.9)
+engine.setProperty('pitch', 100)
+engine.setProperty('age', 'young')
 def speak(audio):
     '''
     the function is used to speak the audio
@@ -40,15 +44,15 @@ def wishMe():
         This function will determine the wishing time
         :return: greetings
         '''
-        hr = int(datetime.datetime.now().strftime('%I'))
-        if 5 <= hr >= 11:
+        hr =datetime.datetime.now().hour
+        if 5 <= hr < 12:
             return 'Morning'
-        elif 12 <= hr >= 17:
-            return 'afternoon'
-        elif 18 <= hr >= 22:
-            return 'evening'
+        elif 12 <= hr < 18:
+            return 'Afternoon'
+        elif 18 <= hr < 22:
+            return 'Evening'
         else:
-            return 'night'
+            return 'Night'
     speak(f'Good {wishTime()}. Welcome back')
     speak(time())
     speak(date())
@@ -69,5 +73,4 @@ def takeCommand():
         speak("Say that again please...")
         return 'None'
     return query
-
 takeCommand()

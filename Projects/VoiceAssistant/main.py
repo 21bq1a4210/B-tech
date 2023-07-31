@@ -5,21 +5,41 @@ engine =pyttsx3.init() #Ava
 engine.setProperty('voice', 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0')
 engine.setProperty('rate', 143)
 def speak(audio):
+    '''
+    the function is used to speak the audio
+    :param audio: a str which need to be speaking
+    '''
     engine.say(audio)
     engine.runAndWait()
 
 def time():
+    '''
+    this function is used to calculate the current time
+    :return: time in hr:min
+    '''
     tim = datetime.datetime.now().strftime("%I:%M")
     return f"The current time is: {tim}"
 
 def date():
+    '''
+    this function is used to calculate the current date
+    :return: date:month:year
+    '''
     year = int(datetime.datetime.now().year)
     month = int(datetime.datetime.now().month)
     date = int(datetime.datetime.now().day)
-    return (f"The current date is: {date} {month} {year}")
+    return f"The current date is: {date} {month} {year}"
 
 def wishMe():
+    '''
+    This function will wish the customer
+    :return:
+    '''
     def wishTime():
+        '''
+        This function will determine the wishing time
+        :return: greetings
+        '''
         hr = int(datetime.datetime.now().strftime('%I'))
         if 5 <= hr >= 11:
             return 'Morning'

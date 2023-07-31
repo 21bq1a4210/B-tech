@@ -11,4 +11,10 @@ def speak(audio):
 def time():
     tim = datetime.datetime.now().strftime("%I:%M:%S")
     speak(tim)
-time()
+
+def date():
+    year = int(datetime.datetime.now().year)
+    month = int(datetime.datetime.now().month)
+    date = int(datetime.datetime.now().day)
+    speak(f"{date} {month} {year}")
+data()

@@ -1,5 +1,6 @@
 import pyttsx3
 import datetime
+import speech_recognition as sr # internet needed
 
 engine =pyttsx3.init() #Ava
 engine.setProperty('voice', 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0')
@@ -11,7 +12,6 @@ def speak(audio):
     '''
     engine.say(audio)
     engine.runAndWait()
-
 def time():
     '''
     this function is used to calculate the current time
@@ -53,4 +53,21 @@ def wishMe():
     speak(time())
     speak(date())
     speak('Hello there, I am Ava. how can I be of service')
-wishMe()
+
+def takeCommand():
+    recognizer = sr.Recognizer()
+    with sr.Microphone() as source:
+        print('Listening..')
+        recognizer.pause_threshold = 1
+        audio = recognizer.listen(source)
+    try:
+        print("Recognizing...")
+        query = recognizer.recognize_google(audio, language='en-in')
+        print(f"User said: {query}")
+    except Exception as e:
+        print(e)
+        speak("Say that again please...")
+        return 'None'
+    return query
+
+takeCommand()

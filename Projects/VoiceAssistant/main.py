@@ -1,4 +1,5 @@
 import pyttsx3
+import datetime
 
 engine =pyttsx3.init() #Ava
 engine.setProperty('voice', 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0')
@@ -7,4 +8,7 @@ def speak(audio):
     engine.say(audio)
     engine.runAndWait()
 
-speak('Hey, hi i am Ava your Ai Assistant')
+def time():
+    tim = datetime.datetime.now().strftime("%I:%M:%S")
+    speak(tim)
+time()

@@ -53,10 +53,10 @@ def wishMe():
             return 'Evening'
         else:
             return 'Night'
-    speak(f'Good {wishTime()}. Welcome back')
+    speak(f'Welcome back')
     speak(time())
     speak(date())
-    speak('Hello there, I am Ava. how can I be of service')
+    speak(f'Good {wishTime()}, I am Ava. how can I be of service')
 
 def takeCommand():
     recognizer = sr.Recognizer()
@@ -73,4 +73,11 @@ def takeCommand():
         speak("Say that again please...")
         return 'None'
     return query
-takeCommand()
+
+if __name__ == "__main__":
+    wishMe()
+    while True:
+        query = takeCommand().lower()
+        if 'shutdown' in query:
+            speak("Have a nice day. bye...")
+            break

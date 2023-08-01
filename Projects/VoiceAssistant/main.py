@@ -1,6 +1,7 @@
 import pyttsx3
 import datetime
 import speech_recognition as sr # internet needed
+import math_calc
 
 engine =pyttsx3.init() #Ava
 engine.setProperty('voice', 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0')
@@ -75,9 +76,13 @@ def takeCommand():
     return query
 
 if __name__ == "__main__":
-    wishMe()
+    #wishMe()
     while True:
         query = takeCommand().lower()
         if 'shutdown' in query:
             speak("Have a nice day. bye...")
             break
+        if 'calculate' in query:
+            answer = str(math_calc.calculate(query))
+            print(f'{query} = {answer}')
+            speak(answer)

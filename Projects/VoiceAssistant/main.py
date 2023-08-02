@@ -1,7 +1,9 @@
 import pyttsx3
 import datetime
 import speech_recognition as sr # internet needed
-import math_calc
+from time import sleep
+import math_calc, joke
+
 
 engine =pyttsx3.init() #Ava
 engine.setProperty('voice', 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0')
@@ -85,4 +87,14 @@ if __name__ == "__main__":
         if 'calculate' in query:
             answer = str(math_calc.calculate(query))
             print(f'{query} = {answer}')
-            speak(answer)
+            speak(f'{query} = {answer}')
+        if 'joke' in query:
+            c = 'yes'
+            while c == 'yes':
+                joke = joke.tellMeJoke()
+                speak()
+                sleep(3)
+                speak('Do you want to tell me another joke')
+                c = takeCommand().lower()
+            else:
+                speak('i hope you enjoyed my jokes')

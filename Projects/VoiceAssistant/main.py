@@ -78,7 +78,7 @@ def takeCommand():
     return query
 
 if __name__ == "__main__":
-    #wishMe()
+    wishMe()
     while True:
         query = takeCommand().lower()
         if 'shutdown' in query:
@@ -92,9 +92,12 @@ if __name__ == "__main__":
             c = 'yes'
             while c == 'yes':
                 joke = joke.tellMeJoke()
-                speak()
+                speak(joke)
+                print(joke)
                 sleep(3)
                 speak('Do you want to tell me another joke')
+                print('Do you want to tell me another joke')
                 c = takeCommand().lower()
             else:
+                print('i hope you enjoyed my jokes')
                 speak('i hope you enjoyed my jokes')

@@ -84,7 +84,6 @@ if __name__ == "__main__":
     wishMe()
     while True:
         query = takeCommand().lower()
-        basic_conversation.basicConversation(query)
         if 'shutdown' in query:
             speak("Have a nice day. bye...")
             break
@@ -93,13 +92,12 @@ if __name__ == "__main__":
             speak(f'{query} = {answer}')
         elif 'joke' in query:
             c = 'yes'
-            while c == 'yes':
+            while c == 'yes' or c == 'yep':
                 joke = joke.tellMeJoke()
                 speak(joke)
-                sleep(3)
+                sleep(2)
                 speak('Do you want to tell me another joke')
                 c = takeCommand().lower()
             else:
                 speak('i hope you enjoyed my jokes')
-        else:
-            speak('I am still learning')
+        speak(basic_conversation.basicConversation(query))

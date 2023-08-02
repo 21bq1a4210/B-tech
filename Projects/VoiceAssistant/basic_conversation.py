@@ -1,13 +1,38 @@
 import datetime
-def basicConversation(user_input):
-    if 'hello' or 'hi' in user_input:
-        return 'Hello! How can I help you?'
-    elif 'how are you' in user_input:
+WISH_WORDS = ["hello", "hi", "hey", "howdy", "good morning", "good afternoon", "good evening", "greetings", "salutations", "hey there", "yo", "what's up", "hiya", "sup", "hola", "namaste", "bonjour", "good day", "hello there", "hi there"]
+GREETINGS_SENTENCES = ["how are you", "how's it going", "how have you been", "how do you do", "what's up", "what's going on", "how are things", "how's life", "how are you doing", "howdy", "how are ya", "what's happening", "what's new", "how's your day", "how's everything", "how's your day going", "how are you today", "how are you holding up", "how's your week", "how are you feeling"]
+TIME_SENTENCES = ["current time", "what's the time", "tell me the time", "time please", "what time is it", "what's the current time", "can you tell me the time", "do you know the time", "what is the time now", "time", "tell me time", "what time do we have", "do you have the time"]
+DATE_SENTENCES = ["current date", "what's the date", "tell me the date", "date please", "what is today's date", "what's the current date", "can you tell me the date", "do you know the date", "today's date", "tell me date", "what date is it", "do you have the date", "what's today's date", "do you know today's date"]
+NAME_SENTENCES = ["what is your name", "who are you", "tell me your name", "what's your name", "may I know your name", "who is this", "what do I call you", "your name please", "who are you?", "who's speaking", "what should I call you", "what can I call you", "do you have a name", "identify yourself"]
+CAPABILITIES_SENTENCES = ["what can you do", "what are your abilities", "tell me your capabilities", "what are you capable of", "what functionalities do you have", "what tasks can you perform", "what do you know how to do", "what are your skills", "list your abilities", "what are your features", "what tasks are you designed for", "what services can you provide", "what do you offer", "what are your functions"]
+
+def greeting_sentence(greeting):
+    if "how" in greeting and "you" in greeting:
         return "I'm just a computer program, but I'm doing fine. Thank you for asking!"
-    elif 'current time' or 'time':
+    elif "what's up" in greeting or "what's going on" in greeting or "what's happening" in greeting or "what's new" in greeting:
+        return "Not much, just here to assist you!"
+    elif "how are things" in greeting or "how's life" in greeting:
+        return "I'm an AI, so I don't have feelings, but I'm ready to help you!"
+    elif "how do you do" in greeting:
+        return "I'm doing well, thank you. How can I assist you?"
+
+def basicConversation(user_input):
+    if any(user_input.startswith(word) for word in WISH_WORDS):
+        return 'Hello! How can I help you?'
+    elif user_input in GREETINGS_SENTENCES:
+        return greeting_sentence(user_input)
+    elif user_input in TIME_SENTENCES:
         current_time = datetime.datetime.now().strftime("%I:%M %p")
         return f"current time is: {current_time}"
-    elif 'current date' or 'date':
+    elif user_input in DATE_SENTENCES:
         current_date = datetime.date.today()
         return f"current date is: {current_date}"
-
+    elif user_input in NAME_SENTENCES:
+        return "My name is Ava created by Sarath and I'm your virtual assistant"
+    elif user_input in CAPABILITIES_SENTENCES:
+        return "Currently, I can perform arithmetic operations and share jokes with you. If you have any questions or need assistance, feel free to ask!"
+    else:
+        return "ask me a new questions"
+# if __name__ == "__main__":
+#     print(basicConversation(input(":")))
+#

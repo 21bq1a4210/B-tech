@@ -2,6 +2,8 @@ import pyttsx3
 import datetime
 import speech_recognition as sr # internet needed
 from time import sleep
+
+import basic_conversation
 import math_calc, joke
 
 
@@ -58,10 +60,8 @@ def wishMe():
         else:
             return 'Night'
     speak(f'Welcome back')
-    #print('Welcome back')
     speak(time())
     speak(date())
-    #print(f'Good {wishTime()}, I am Ava. how can I be of service')
     speak(f'Good {wishTime()}, I am Ava. how can I be of service')
 
 def takeCommand():
@@ -84,23 +84,22 @@ if __name__ == "__main__":
     wishMe()
     while True:
         query = takeCommand().lower()
+        basic_conversation.basicConversation(query)
         if 'shutdown' in query:
             speak("Have a nice day. bye...")
             break
-        if 'calculate' in query:
+        elif 'calculate' in query:
             answer = str(math_calc.calculate(query))
-            #print(f'{query} = {answer}')
             speak(f'{query} = {answer}')
-        if 'joke' in query:
+        elif 'joke' in query:
             c = 'yes'
             while c == 'yes':
                 joke = joke.tellMeJoke()
                 speak(joke)
-                #print(joke)
                 sleep(3)
                 speak('Do you want to tell me another joke')
-                #print('Do you want to tell me another joke')
                 c = takeCommand().lower()
             else:
-                #print('i hope you enjoyed my jokes')
                 speak('i hope you enjoyed my jokes')
+        else:
+            speak('I am still learning')

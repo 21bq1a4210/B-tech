@@ -17,6 +17,7 @@ def speak(audio):
     the function is used to speak the audio
     :param audio: a str which need to be speaking
     '''
+    print(audio)
     engine.say(audio)
     engine.runAndWait()
 def time():
@@ -57,8 +58,10 @@ def wishMe():
         else:
             return 'Night'
     speak(f'Welcome back')
+    #print('Welcome back')
     speak(time())
     speak(date())
+    #print(f'Good {wishTime()}, I am Ava. how can I be of service')
     speak(f'Good {wishTime()}, I am Ava. how can I be of service')
 
 def takeCommand():
@@ -86,18 +89,18 @@ if __name__ == "__main__":
             break
         if 'calculate' in query:
             answer = str(math_calc.calculate(query))
-            print(f'{query} = {answer}')
+            #print(f'{query} = {answer}')
             speak(f'{query} = {answer}')
         if 'joke' in query:
             c = 'yes'
             while c == 'yes':
                 joke = joke.tellMeJoke()
                 speak(joke)
-                print(joke)
+                #print(joke)
                 sleep(3)
                 speak('Do you want to tell me another joke')
-                print('Do you want to tell me another joke')
+                #print('Do you want to tell me another joke')
                 c = takeCommand().lower()
             else:
-                print('i hope you enjoyed my jokes')
+                #print('i hope you enjoyed my jokes')
                 speak('i hope you enjoyed my jokes')

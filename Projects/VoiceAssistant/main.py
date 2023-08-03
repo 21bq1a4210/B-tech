@@ -4,7 +4,7 @@ import speech_recognition as sr # internet needed
 from time import sleep
 
 import basic_conversation
-import math_calc, joke
+import math_calc, joke, open
 
 
 engine =pyttsx3.init() #Ava
@@ -81,7 +81,7 @@ def takeCommand():
     return query
 
 if __name__ == "__main__":
-    wishMe()
+    #wishMe()
     while True:
         query = takeCommand().lower()
         if 'shutdown' in query:
@@ -100,4 +100,7 @@ if __name__ == "__main__":
                 c = takeCommand().lower()
             else:
                 speak('i hope you enjoyed my jokes')
+        elif query.startswith("open"):
+            app = query.replace('open ', '')
+            speak(open.file(app))
         speak(basic_conversation.basicConversation(query))

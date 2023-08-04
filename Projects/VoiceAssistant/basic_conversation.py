@@ -5,7 +5,7 @@ TIME_SENTENCES = ["current time", "what's the time", "tell me the time", "time p
 DATE_SENTENCES = ["current date", "what's the date", "tell me the date", "date please", "what is today's date", "what's the current date", "can you tell me the date", "do you know the date", "today's date", "tell me date", "what date is it", "do you have the date", "what's today's date", "do you know today's date"]
 NAME_SENTENCES = ["what is your name", "who are you", "tell me your name", "what's your name", "may I know your name", "who is this", "what do I call you", "your name please", "who are you?", "who's speaking", "what should I call you", "what can I call you", "do you have a name", "identify yourself"]
 CAPABILITIES_SENTENCES = ["what can you do",'tell me about yourself', "what are your abilities", "tell me your capabilities", "what are you capable of", "what functionalities do you have", "what tasks can you perform", "what do you know how to do", "what are your skills", "list your abilities", "what are your features", "what tasks are you designed for", "what services can you provide", "what do you offer", "what are your functions"]
-
+ADULT_CONTENT_WORDS = ['adult material', 'bare-skinned', 'sexual content', 'uncovered', '18+', 'sexy', 'nudity', 'adult theme', 'bare', 'adults-only', 'obscene', 'disrobed', 'nsfw', 'stripped', 'streaking', 'porn', 'sexual', 'sexually explicit', 'sex', 'unclothed', 'topless', 'indecent exposure', 'pornography', 'vulgar', 'mature content', 'sexually-oriented', 'intimate', 'explicit', 'mature', 'adult', 'erotic', 'nude', 'lewd', 'sensual', 'xxx', 'exposed', 'bottomless', 'raunchy', 'adult content', 'undressed', 'risqué', 'naked', 'indecent', 'provocative']
 def greeting_sentence(greeting):
     if "how" in greeting and "you" in greeting:
         return "I'm just a computer program, but I'm doing fine. Thank you for asking!"
@@ -31,9 +31,10 @@ def basicConversation(user_input):
         return "My name is Ava created by Sarath and I'm your virtual assistant"
     elif user_input in CAPABILITIES_SENTENCES:
         return "Currently, I can perform arithmetic operations and share jokes with you. If you have any questions or need assistance, feel free to ask!"
+    elif user_input in ADULT_CONTENT_WORDS:
+        return "I am sorry to share such a rude info"
     else:
         return ""
 
 # if __name__ == "__main__":
-#     print(basicConversation(input(":")))
-#
+#     #print(basicConversation(input(":")))

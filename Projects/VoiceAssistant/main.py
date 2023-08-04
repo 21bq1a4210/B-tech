@@ -3,11 +3,9 @@ import datetime
 import speech_recognition as sr # internet needed
 from time import sleep
 
-import wikipedia as wikipedia
-
 import basic_conversation
 import math_calc, joke, open
-
+import wiki_search
 
 engine =pyttsx3.init() #Ava
 engine.setProperty('voice', 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0')
@@ -106,5 +104,5 @@ if __name__ == "__main__":
             app = query.replace('open ', '')
             speak(open.file(app))
         elif 'wikipedia' in query:
-            speak(wikipedia.summary(query.replace('wikipedia', ''), sentences=13))
+            speak(wiki_search.search(query))
         speak(basic_conversation.basicConversation(query))

@@ -3,6 +3,8 @@ import datetime
 import speech_recognition as sr # internet needed
 from time import sleep
 
+import wikipedia as wikipedia
+
 import basic_conversation
 import math_calc, joke, open
 
@@ -84,7 +86,7 @@ if __name__ == "__main__":
     #wishMe()
     while True:
         query = takeCommand().lower()
-        if 'shutdown' in query:
+        if 'offline' in query:
             speak("Have a nice day. bye...")
             break
         elif 'calculate' in query:
@@ -103,4 +105,6 @@ if __name__ == "__main__":
         elif query.startswith("open"):
             app = query.replace('open ', '')
             speak(open.file(app))
+        elif 'wikipedia' in query:
+            speak(wikipedia.summary(query.replace('wikipedia', ''), sentences=1))
         speak(basic_conversation.basicConversation(query))

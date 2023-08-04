@@ -106,5 +106,5 @@ if __name__ == "__main__":
             app = query.replace('open ', '')
             speak(open.file(app))
         elif 'wikipedia' in query:
-            speak(wikipedia.summary(query.replace('wikipedia', ''), sentences=1))
+            speak(wikipedia.summary(query.replace('wikipedia', ''), sentences=13))
         speak(basic_conversation.basicConversation(query))

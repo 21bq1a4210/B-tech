@@ -1,0 +1,16 @@
+@echo off
+REM Check if Python is installed
+where python > nul 2>&1
+IF %ERRORLEVEL% NEQ 0 (
+    echo Python is not installed on this system.
+    echo Please install Python and try again.
+    pause
+    exit /b
+)
+
+REM Replace "main.py" with the name of your Python script file.
+REM Make sure the Python executable is in your system PATH or provide the full path to it.
+python python_script.py
+
+REM Pause at the end (optional, for better visibility of the output)
+pause

@@ -2,7 +2,7 @@ import pyttsx3
 import datetime
 import speech_recognition as sr # internet needed
 from time import sleep
-
+ 
 import basic_conversation
 import math_calc, joke, open
 import wiki_search
@@ -81,7 +81,7 @@ def takeCommand():
     return query
 
 if __name__ == "__main__":
-    #wishMe()
+    wishMe()
     while True:
         query = takeCommand().lower()
         if 'offline' in query:

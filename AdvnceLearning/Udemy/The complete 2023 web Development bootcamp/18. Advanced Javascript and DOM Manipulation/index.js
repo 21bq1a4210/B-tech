@@ -45,6 +45,7 @@ for(var i=0;i<document.querySelectorAll(".drum").length;i++){
     });
 }
 
-
-// var audio = new Audio("sounds/tom-1.mp3");
-//         audio.play();
+document.addEventListener("keypress",function(event){
+    var char = event.key;
+    makeSound(char);
+});

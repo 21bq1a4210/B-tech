@@ -77,3 +77,29 @@ console.log(values);
 // [1, '26-July-2023', 'mobile', 'Brave']
 
 
+// Object.entries() :
+// Object.entries() creates a nested array of the 
+// key/value pairs of an Object
+
+// Initialize an object 
+const OS = {
+    name: "Ubuntu",
+    version: 22.04,
+    license: "Open Source"
+};
+// Get the Object key/value pairs 
+const entries = Object.entries(OS);
+console.log(entries);
+// Output:
+// [Array(2), Array(2), Array(2)]
+// 0
+// : 
+// (2) ['name', 'Ubuntu']
+// 1
+// : 
+// (2) ['version', 22.04]
+// 2
+// : 
+// (2) ['license', 'Open Source']
+
+

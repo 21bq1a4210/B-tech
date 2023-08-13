@@ -143,3 +143,23 @@ newUser.active = true;
 console.log(newUser);
 // Output:
 // {username: 'asdfg', password: '12eds'}
+
+
+// Object.seal() :
+// Object.seal() prevents new proprties from being added 
+// to an object, but allows the modification of existing 
+// properties. This method is similar to object.freeze().
+// Refresh your console before implementing the code 
+// below to avoid an console.error. 
+
+// Initialize an object 
+const user1 = {
+    username: "asdfg",
+    password:"12eds"
+};
+const newUser1 = Object.seal(user1);
+newUser1.password = "********";
+newUser1.active = true;
+console.log(newUser1);
+// Output:
+// {username: 'asdfg', password: '********'}

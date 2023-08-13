@@ -163,3 +163,15 @@ newUser1.active = true;
 console.log(newUser1);
 // Output:
 // {username: 'asdfg', password: '********'}
+
+
+// Object.getPrototypeOf() :
+// Object.getPrototypeOf() is used to get the internal
+// hidden [[Prototype]] of an Object, also accessible
+//         through the __proto__property.
+// In below example, we can create an array, which has 
+// access to the Array prototype.
+const employes = ["Ron", "Jan", "Mon", "Lee"];
+Object.getPrototypeOf(employes);
+// Output:
+// [constructor: ƒ, at: ƒ, concat: ƒ, copyWithin: ƒ, fill: ƒ, …]

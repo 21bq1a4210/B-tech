@@ -1,13 +1,16 @@
 // object methosds in js 
 // Everything you need to master Object in Js 
+
 // 1.
 // Object.create()
 // Object.keys()
 // Object.values()
+
 // 2.
 // Object.entries()
 // Object.assign()
 // Object.freeze()
+
 // 3.
 // Object.seal()
 // Object.getPrototypeOf()
@@ -30,10 +33,8 @@ const job = {
         )
     },
 }
-
 // Use Object.create to pass properties
 const barista = Object.create(job);
-
 barista.position = "barista";
 barista.showDetails();
 // Output:
@@ -51,9 +52,28 @@ const employees = {
     sales: "Mij",
     accountant: 'Gmo'
 };
-
 // Get the keys of the object
 const keys = Object.keys(employees);
 console.log(keys);
 // Output:
 // ['boss', 'secretary', 'sales', 'accountant']
+
+
+// Object.values() :
+// Object.values() create an array containing the
+// values of an object
+
+// Initialize an object
+const session = {
+    id: 1,
+    time: "26-July-2023",
+    device: "mobile",
+    browser: "Brave"
+};
+// Get all values of the object 
+const values = Object.values(session);
+console.log(values);
+// Output:
+// [1, '26-July-2023', 'mobile', 'Brave']
+
+

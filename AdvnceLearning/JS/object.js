@@ -103,3 +103,23 @@ console.log(entries);
 // (2) ['license', 'Open Source']
 
 
+// Object.assign() :
+// Object.assign is used to copy values from one Object
+// to another, we can create 2 objects, and merge 
+// them with objects.assign(). 
+
+// Initialize an object 
+const name = {
+    firstName: "Sarath",
+    lastName: "chandra"
+};
+// Initialize another object 
+const details = {
+    job: "student",
+    college: "VVIT"
+};
+// Merge the objects
+const char = Object.assign(name, details);
+console.log(char);
+// Output:
+// {firstName: 'Sarath', lastName: 'chandra', job: 'student', college: 'VVIT'}

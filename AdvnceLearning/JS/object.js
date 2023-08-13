@@ -19,7 +19,6 @@
 // new object and link it to the prototype of an 
 // existing object. We can create a job object 
 // instance, and extend it to a more specific object.
-
 const job = {
     position: "cashier",
     type:"hourly",
@@ -37,3 +36,24 @@ const barista = Object.create(job);
 
 barista.position = "barista";
 barista.showDetails();
+// Output:
+// The barista position is hourly and is open.
+
+
+// Object.keys() :
+// Object.keys() creates an array containing the keys of an object. 
+// We can  create an object and print the array of keys.
+
+// Initialize an object
+const employees = {
+    boss: "Sarath",
+    secretary: "Chandra",
+    sales: "Mij",
+    accountant: 'Gmo'
+};
+
+// Get the keys of the object
+const keys = Object.keys(employees);
+console.log(keys);
+// Output:
+// ['boss', 'secretary', 'sales', 'accountant']

@@ -123,3 +123,23 @@ const char = Object.assign(name, details);
 console.log(char);
 // Output:
 // {firstName: 'Sarath', lastName: 'chandra', job: 'student', college: 'VVIT'}
+
+
+// Object.freeze() :
+// Object.freeze() prevents modification to properties
+// and values of an object and prevents properties
+// from being added or removed from an object.
+
+// Initialize an object 
+const user = {
+    username: "asdfg",
+    password:"12eds"
+};
+// Freeze the object
+const newUser = Object.freeze(user);
+
+newUser.password = "**********";
+newUser.active = true;
+console.log(newUser);
+// Output:
+// {username: 'asdfg', password: '12eds'}

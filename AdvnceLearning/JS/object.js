@@ -175,3 +175,18 @@ const employes = ["Ron", "Jan", "Mon", "Lee"];
 Object.getPrototypeOf(employes);
 // Output:
 // [constructor: ƒ, at: ƒ, concat: ƒ, copyWithin: ƒ, fill: ƒ, …]
+
+
+// Object.setPrototypeOf() :
+// The Object.setPrototypeOf() static method sets the 
+// prototype (i.e., the internal [[Prototype]] property)
+// of a specified object to another object or null.
+const obj = {};
+const parent = {
+    foo: "bar"
+};
+console.log(obj.foo);
+// Expected output: undefined
+Object.setPrototypeOf(obj, parent);
+console.log(obj.foo);
+//Output: bar

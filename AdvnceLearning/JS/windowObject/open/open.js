@@ -1,4 +1,4 @@
-let siteName = window.prompt("enter your fav site (Like google.com):");
+let siteName = window.prompt("enter your fav site:", "google.com");
 if (window.confirm(`Do you want to open ${siteName}?`)){
     const windowFeatures = "left=100, top=100, width=320, height=320";
     const siteLink = `https://www.${siteName}`;

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d07862ea-c529-49b8-9e16-ef78f5bb2780" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/VoiceAssistant.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/VoiceAssistant.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoiceAssistant.bat.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/basic_conversation.py" beforeDir="false" afterPath="$PROJECT_DIR$/basic_conversation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/Analysis-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/COLLECT-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/EXE-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/PKG-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/PYZ-00.pyz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/PYZ-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/base_library.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/main.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/main.exe.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/main.pkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/warn-main.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/xref-main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/VCRUNTIME140.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/VCRUNTIME140_1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_asyncio.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_bz2.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_ctypes.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_decimal.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_hashlib.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_lzma.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_multiprocessing.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_overlapped.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_queue.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_socket.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_ssl.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/_uuid.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/base_library.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/certifi/cacert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/certifi/py.typed" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/charset_normalizer/md.cp310-win_amd64.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/charset_normalizer/md__mypyc.cp310-win_amd64.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/libcrypto-1_1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/libffi-7.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/libssl-1_1.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/main.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/pyaudio/_portaudio.cp310-win_amd64.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/pyexpat.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/python310.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/pywin32_system32/pythoncom310.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/pywin32_system32/pywintypes310.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/select.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/speech_recognition/flac-linux-x86" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/speech_recognition/flac-linux-x86_64" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/speech_recognition/flac-mac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/speech_recognition/flac-win32.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/speech_recognition/pocketsphinx-data/en-US/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/speech_recognition/pocketsphinx-data/en-US/acoustic-model/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/speech_recognition/pocketsphinx-data/en-US/acoustic-model/feat.params" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/speech_recognition/pocketsphinx-data/en-US/acoustic-model/mdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/speech_recognition/pocketsphinx-data/en-US/acoustic-model/means" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/speech_recognition/pocketsphinx-data/en-US/acoustic-model/noisedict" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/speech_recognition/pocketsphinx-data/en-US/acoustic-model/sendump" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/speech_recognition/pocketsphinx-data/en-US/acoustic-model/transition_matrices" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/speech_recognition/pocketsphinx-data/en-US/acoustic-model/variances" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/speech_recognition/pocketsphinx-data/en-US/language-model.lm.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/speech_recognition/pocketsphinx-data/en-US/pronounciation-dictionary.dict" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/unicodedata.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/wheel-0.40.0.dist-info/INSTALLER" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/wheel-0.40.0.dist-info/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/wheel-0.40.0.dist-info/METADATA" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/wheel-0.40.0.dist-info/RECORD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/wheel-0.40.0.dist-info/WHEEL" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/wheel-0.40.0.dist-info/entry_points.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/win32/_win32sysloader.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main/win32/win32api.pyd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.spec" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2TvmgWaRmv3SkA64EunjuofisnF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="VoiceAssistant" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d07862ea-c529-49b8-9e16-ef78f5bb2780" name="Changes" comment="" />
+      <created>1691932041505</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1691932041505</updated>
+      <workItem from="1691932046345" duration="351000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        table, tr, td{
+            border: 1px solid black;
+        }
+        tr:hover{
+                background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <button id="run">Run</button> <br>
+    <input type="number" id="number">
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>N</th>
+                <th>*</th>
+                <th>M</th>
+                <th>=</th>
+                <th>N*M</th>
+            </tr>
+        </thead>
+        <tbody id="mulTable"></tbody>
+    </table>
+    <script src="index.js"></script>
+</body>
+</html>

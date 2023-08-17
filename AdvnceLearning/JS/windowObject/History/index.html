@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>History API Example</title>
+</head>
+<body>
+    <button id="pushState">Push State</button>
+    <button id="replaceState">Replace State</button>
+
+    <script>
+        const pushStateButton = document.getElementById("pushState");
+        const replaceStateButton = document.getElementById("replaceState");
+
+        pushStateButton.addEventListener("click", () => {
+            const stateData = { page: "page1" };
+            const pageTitle = "Page 1";
+            const pageUrl = "/page1";
+            history.pushState(stateData, pageTitle, pageUrl);
+
+            console.log("Pushed new state:", history.state);
+        });
+
+        replaceStateButton.addEventListener("click", () => {
+            const stateData = { page: "page2" };
+            const pageTitle = "Page 2";
+            const pageUrl = "/page2";
+            history.replaceState(stateData, pageTitle, pageUrl);
+
+            console.log("Replaced state:", history.state);
+        });
+    </script>
+</body>
+</html>

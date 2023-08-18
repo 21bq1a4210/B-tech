@@ -48,5 +48,11 @@ JOKE = [
     "What's the best thing about Switzerland? I don't know, but their flag is a big plus!",
 ]
 
+jokes_list = ["Why don't scientists trust atoms? Because they make up everything.", "Parallel lines have so much in common. It's a shame they'll never meet.", "I told my wife she was drawing her eyebrows too high. She seemed surprised.", "Why don't skeletons fight each other? They don't have the guts.", "I used to play piano by ear, but now I use my hands.", "Did you hear about the claustrophobic astronaut? He just needed a little space.", "Why don't oysters donate to charity? Because they're shellfish.", "I'm reading a book about anti-gravity. It's impossible to put down.", "What did one wall say to the other wall? I'll meet you at the corner.", "Why was the math book sad? It had too many problems."]
+
+
 def tellMeJoke():
     return JOKE[randint(0,len(JOKE))]
+
+if __name__ == "__main__":
+    print(len((set(JOKE))))

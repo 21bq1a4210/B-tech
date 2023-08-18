@@ -48,39 +48,42 @@
 </head>
 
 <body>
-    <font>
+    <form id="userForm">
         <div class="cont">
             <div class="label-input">
-                <label for="">User Name:</label>
-                <input type="text">
+                <label for="name">User Name:</label>
+                <input type="text" name="name" id="name">
             </div>
 
             <div class="label-input">
-                <label for="">Email:</label>
-                <input type="email">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
             </div>
 
             <div class="label-input">
-                <label for="">Pasword:</label>
-                <input type="pasword" name="" id="">
+                <label for="pasword">Pasword:</label>
+                <input type="pasword" name="pasword" id="pasword">
             </div>
 
             <div class="label-input">
-                <label for="">Date:</label>
-                <input type="date" name="" id="">
+                <label for="date">Date:</label>
+                <input type="date" name="date" id="date">
             </div>
 
             <div class="box-1">
                 <div class="label-input">
-                    <button>Submit</button>
+                    <input type="submit" id="submitBtn">
                 </div>
 
                 <div class="label-input">
-                    <button>reset</button>
+                    <input type="reset">
                 </div>
             </div>
         </div>
-    </font>
+    </form>
+
+    <script type ="module" src ="index.js">
+    </script>
 </body>
 
 </html>

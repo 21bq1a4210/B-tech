@@ -1,0 +1,50 @@
+body{
+    background-color: antiquewhite;
+    min-height: 100vh;
+    max-height: 50rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabs{
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 500px;
+}
+
+label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-right: .2rem;
+    cursor: pointer;
+    background-color: aquamarine;
+    font-weight: bold;
+    transition: ease 0.2s all;
+}
+
+.tab{
+    flex-grow: 1;
+    width:100%;
+    height: 100%;
+    padding: 1rem;
+    background: #fff;
+    box-shadow: -5px 10px 0px 0px black;
+}
+
+/* input{
+    display:none;
+}
+
+input:checked + label{
+    background: #fff;
+}
+
+input:checked + label + .tab{
+    display: block;
+} */

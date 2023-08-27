@@ -1,16 +1,50 @@
-# This is a sample Python script.
+import math
+import random
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import pygame
+from pygame import mixer
 
+# initialize pygame
+pygame.init()
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+# create the screen
+screen = pygame.display.set_mode((800, 600))
 
+# background
+background = pygame.image.load('Images/background.png')
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+# sound
+mixer.music.load('Sounds/background.wav')
+mixer.music.play(-1)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# Caption and icon
+pygame.display.set_caption("Space Invader")
+icon = pygame.image.load("Images/ufo.png")
+pygame.display.set_icon(icon)
+
+# player
+playerImg = pygame.image.load("Images/player.png")
+playerX = 370
+playerY = 480
+playerX_change = 0
+
+def player(x, y):
+    screen.blit(playerImg, (x, y))
+
+# game loop
+running = True
+while running:
+    # RGB
+    screen.blit(background, (0, 0))
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+            running = False
+
+    player(playerX, playerY)
+    pygame.display.update()
+
+# quit pygame
+pygame.quit()

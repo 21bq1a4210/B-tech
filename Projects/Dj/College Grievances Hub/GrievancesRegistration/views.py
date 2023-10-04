@@ -9,6 +9,7 @@
 
 from django.shortcuts import render, redirect, HttpResponse
 from .models import Grievance
+from .send_mail import SendMail
 
 def grievance_form(request):
     if request.method == 'POST':
@@ -32,6 +33,25 @@ def grievance_form(request):
             Grevience_column=Grevience_column
         )
         grievance.save()
+
+        #last_record = Grievance.objects.latest('-id')
+
+        data = {
+            'id' : grievance.id,
+            'name' : grievance.complaintant_name,
+            'reg_number' : grievance.registration_no,
+            'email' : grievance.email,
+            'who' : grievance.who,
+            'dept': grievance.dept,
+            'year': grievance.year,
+            'type_of_grievance': grievance.g,
+            'complant': grievance.Grevience_column
+        }
+
+        # MailToCounseller(data
+        mail = SendMail(data)
+        mail.MailToCounseller()
+
         # You can redirect to a success page or do any other desired action here.
         return redirect('success_page')
 

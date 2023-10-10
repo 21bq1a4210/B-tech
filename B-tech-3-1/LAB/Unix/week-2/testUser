@@ -1,0 +1,29 @@
+User Name    User Id     Group ID    Home Directory
+- - - - - - - -     - - - - -     - - - - - - -    - - - - - - - - - - -
+root:0:0:/root
+daemon:1:1:/usr/sbin
+bin:2:2:/bin
+sys:3:3:/dev
+sync:4:65534:/bin
+games:5:60:/usr/games
+man:6:12:/var/cache/man
+lp:7:7:/var/spool/lpd
+mail:8:8:/var/mail
+news:9:9:/var/spool/news
+uucp:10:10:/var/spool/uucp
+proxy:13:13:/bin
+www-data:33:33:/var/www
+backup:34:34:/var/backups
+list:38:38:/var/list
+irc:39:39:/run/ircd
+gnats:41:41:/var/lib/gnats
+nobody:65534:65534:/nonexistent
+systemd-network:100:102:/run/systemd
+systemd-resolve:101:103:/run/systemd
+messagebus:102:105:/nonexistent
+systemd-timesync:103:106:/run/systemd
+syslog:104:111:/home/syslog
+_apt:105:65534:/nonexistent
+uuidd:106:112:/run/uuidd
+tcpdump:107:113:/nonexistent
+dnsmasq:108:65534:/var/lib/misc

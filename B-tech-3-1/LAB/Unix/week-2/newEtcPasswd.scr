@@ -1,0 +1,14 @@
+#!/bin/bash
+# creates a file from /etc/passwd
+if [ $# -ne 1 ]
+then
+    echo "INVALID USAGE"
+    echo "USAGE: $0 filename"
+    exit
+fi
+echo "User Name    User Id     Group ID    Home Directory" > "$1"
+echo "- - - - - - - -     - - - - -     - - - - - - -    - - - - - - - - - - -" >> "$1"
+
+cat /etc/passwd | cut -d: -f1,3,4,6 >> "$1"
+echo "$1 successfully created"
+

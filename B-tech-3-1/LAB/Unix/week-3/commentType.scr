@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Check if there are any arguments (none are allowed)
+if [ $# -eq 0 ]; then
+    # Replace double vertical bars '//' with '/*' and '*/' with the rest of the line
+    sed 's+//+/*+' cfile.c | sed 's+*/+*/+' > output.c
+else 
+    echo "Script doesn't require any arguments"
+fi
+
+

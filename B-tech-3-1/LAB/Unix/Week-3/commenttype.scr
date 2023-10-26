@@ -1,0 +1,16 @@
+#!/bin/bash
+if (( $# == 0 ))
+then
+sed 's+//+/*+g' cfile.c > output 
+sed 's+\/\*.*+&*/+' output
+else
+echo "script needs zero args only"
+fi
+
+
+
+
+
+
+
+

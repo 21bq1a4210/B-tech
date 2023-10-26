@@ -1,0 +1,21 @@
+if (( $# == 2 ))
+then
+ if [[ -s $1 ]]
+ then
+  if [[ -d $2 ]]
+  then
+for filename in  $1 
+do
+ cp $filename /home/byrapardhasaradhi/$2
+done
+ else
+ echo "the directory not exist"
+fi
+ else
+ echo "The file not exist or it is empty"
+ fi
+else
+ echo "this script accepts only 2 args 1. filename 2. backup directory name"
+fi
+echo "===============Copy done!================="
+

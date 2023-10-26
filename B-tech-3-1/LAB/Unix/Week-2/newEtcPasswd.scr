@@ -1,0 +1,18 @@
+cat /etc/passwd > output2
+if (( $# == 1 ))
+then
+ echo " Username    UserID      groupID        HomeDirectory" > out1
+ echo "-------------------------------------------------" > out2
+ cat output2 | cut -f1 -d: > 1
+ cat output2 | cut -f3 -d: > 2
+ cat output2 | cut -f4 -d: > 3
+ cat output2 | cut -f6 -d: > 4
+ paste 1 2 3 4 | expand --tabs=15 > out3
+ cat out1 out2 out3 > $1
+else
+ echo "This script accepts only one argument 1. filename to create"
+fi
+
+
+
+ 

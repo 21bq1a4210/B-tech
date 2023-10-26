@@ -1,0 +1,21 @@
+if (($# == 1))
+then
+ if [[ -r $1 ]]
+ then
+   who | awk '{print $1}' > users
+   cat $1 > message
+   wall message
+   echo "successfully message sent to all users"
+ else
+ echo "the file is not readable"
+ fi
+else
+echo "this script accepts only one argument 1. readable file name"
+fi
+
+
+
+
+
+
+

@@ -1,0 +1,13 @@
+#!/bin/bash
+# Script takes a username and gives home dir name
+if [[ $# -eq 1 ]]; then
+    home_dir=$(grep "^$1:" /etc/passwd | cut -d: -f6)
+    if [[ -n "$home_dir" ]]; then
+        echo "Home directory for user $1: $home_dir"
+    else
+        echo "User $1 not found in /etc/passwd"
+    fi
+else
+    echo "Invalid usage. Usage: $0 username"
+fi
+

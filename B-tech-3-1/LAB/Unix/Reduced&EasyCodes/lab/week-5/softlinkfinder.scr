@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ $# -eq 1 ]; then
+    if [ -f $1 ]; then
+        echo "Symbolic links are:"
+        ls -l | grep "^l.*$1" |cut -d " " -f12
+    else
+        echo "File does not exist."
+    fi
+else
+    echo "This script accepts only one argument: 1. filename"
+fi
+

@@ -1,0 +1,13 @@
+if [ $# -ne 1 ]; then
+	echo "INVALID USAGE"
+	echo "USAGE: $0 filename"
+	exit
+fi
+
+echo "UserName	UserId	GroupId	HomeDir" > "$1"   #Adding echo  to 1st arg
+echo "---------------------------------" >> "$1" #Appending echo command to 1st arg
+cat /etc/passwd | cut -f1,3,4,6 -d: >> "$1"
+echo "$1 SUCCESSFULLY created"
+
+
+ 

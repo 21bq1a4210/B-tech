@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ $# -eq 1 && -r $1 ]]; then
+    who | awk '{print $1}' | wall
+    echo "Successfully sent message to all users."
+else
+    echo "This script accepts only one argument (a readable file)."
+fi
+

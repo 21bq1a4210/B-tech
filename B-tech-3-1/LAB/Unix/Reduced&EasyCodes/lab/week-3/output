@@ -1,0 +1,8 @@
+/* This ia 1st comment
+#include <studio.h>
+#include <conio.h>
+/* This is main
+int main(){
+	/* This is body
+}
+/* End of the code

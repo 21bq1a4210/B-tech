@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ $# -eq 3 ]; then
+    if [[ $1 =~ [1-9] && $2 =~ [1-9] && $3 =~ [1-9] ]]; then
+        ls -l | awk -v field1=$1 -v field2=$2 -v field3=$3 '{printf "%-50s%-50s%-50s\n", $field1, $field2, $field3}'
+    else
+        echo "Enter all numeric arguments, and each argument value should be less than 9."
+    fi
+else
+    echo "Enter exactly 3 column numbers."
+fi
+

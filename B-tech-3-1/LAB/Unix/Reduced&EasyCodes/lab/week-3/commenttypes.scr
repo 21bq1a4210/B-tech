@@ -1,0 +1,6 @@
+if [ $# -eq 0 ]; then
+	sed 's+//+/*+g' cfile.c > output
+	sed 's+\/\*.*+&*/+' > output
+else
+	echo  "script need zero args only"
+fi

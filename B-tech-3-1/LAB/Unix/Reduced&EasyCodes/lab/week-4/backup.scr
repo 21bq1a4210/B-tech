@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [ $# -eq 2 ]; then
+    if [ -s $1 ]; then
+        if [ -d $2 ]; then
+		for file in $(cat $1); do
+                cp $file /home/lab/week-4/$2
+            done
+            echo "File(s) copied to $2."
+        else
+            echo "The specified directory does not exist."
+        fi
+    else
+        echo "The file does not exist or is empty."
+    fi
+else
+    echo "This script accepts only 2 arguments: 1. filename, 2. backup directory"
+fi
+
+echo "=== Done ==="
+

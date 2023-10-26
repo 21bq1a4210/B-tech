@@ -1,0 +1,18 @@
+if (( $# == 3 ))
+then
+ if [[ $1 == [1-9] && $2 == [1-9] && $3 == [1-9] ]]
+ then
+ls -l > lsout
+awk '{print $field1}' field1=$1 lsout>1
+awk '{print $field2}' field2=$2 lsout>2
+awk '{print $field3}' field3=$3 lsout>3
+paste 1 2 3 | expand --tabs=50
+else
+ echo "enter all the numeric arguments and the argument value should be less than 9"
+ fi
+else
+ echo "enter exactly 3 column numbers"
+fi
+
+
+

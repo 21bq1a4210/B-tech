@@ -1,0 +1,14 @@
+if (( $# == 0 ))
+then
+check=$(tty)
+original='/dev/pts/0'
+if [ "${check}" == $original ]
+then
+ sh sample.scr
+else
+ exit
+fi
+else
+ echo " this script not accepts any arguments"
+fi
+

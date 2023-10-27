@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ $# -eq 2 ]; then
+    if [ -s "$2" ]; then
+        grep -n "$1" "$2"
+    else
+        echo "The file does not exist or is empty."
+    fi
+else
+    echo "This program requires 2 arguments: 1. string to be matched, 2. file."
+fi
+

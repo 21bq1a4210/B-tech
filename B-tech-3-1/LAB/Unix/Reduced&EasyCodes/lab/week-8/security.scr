@@ -1,0 +1,12 @@
+if [ $# -eq 0 ]; then
+	check=$(tty)
+	org='/dev/pts/0'
+
+	if [ "$check" == "$org" ]; then
+		sh sample.scr
+	else
+		exit
+	fi
+else
+	echo "Not accepts any args"
+fi

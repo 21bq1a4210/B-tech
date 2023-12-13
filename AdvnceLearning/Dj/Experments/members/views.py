@@ -2,6 +2,13 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from django.contrib.auth.forms import UserCreationForm
+
+'''
+members/
+├── templates/
+│       └── login.html
+'''
 
 # Create your views here.
 def say_hello(request):
@@ -11,26 +18,42 @@ def login_page(request):
 
 def home(req):
     return render(req, 'home.html')
-'''
-members/
-├── templates/
-│       └── login.html
-'''
 def login_user(request):
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(request, username=username, password=password)
-        #print(username, password)
+
         if user is not None:
             login(request, user)
-            print('login success')
-            # Redirect to a success page or homepage after login
             return redirect('home')  # Replace 'home' with the name of your homepage URL
         else:
-            # Add an error message if login fails
-            print('login failed')
-            return render(request, 'login.html', {'error_message': 'Invalid credentials'})
+            messages.error(request, 'Invalid credentials. Please try again.')
+            return render(request, 'login.html')
 
-    # If the request method is not POST, render the login form
     return render(request, 'login.html')
+
+def logout_user(request):
+    logout(request)
+    messages.success(request, 'You were logged out')
+    return redirect('login')
+
+def register_user(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password1']
+            user = authenticate(request, username=username, password=password)
+            login(request, user)
+            messages.success(request, 'Registration success!')
+            return redirect('login')
+        else:
+            for field, errors in form.errors.items():
+                for error in errors:
+                    messages.error(request, f"{field}: {error}")
+    else:
+        form = UserCreationForm()
+
+    return render(request, 'authenticate/register.html', {'form': form})

@@ -1,0 +1,6 @@
+<!-- myapp/templates/image_list.html -->
+<h2>Image List</h2>
+{% for image in images %}
+    <img src="{{ image.image.url }}" alt="{{ image.description }}">
+    <p>{{ image.description }}</p>
+{% endfor %}

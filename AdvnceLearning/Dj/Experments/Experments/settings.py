@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'members.apps.MembersConfig'         # app_name.apps.class_in_app.py
+    'members.apps.MembersConfig',        # app_name.apps.class_in_app.py
+    'photos.apps.PhotosConfig',
+    'images.apps.ImagesConfig'
     # 'debug-toolbar'
 ]
 

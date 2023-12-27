@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/image_uplode.css' %}">
+</head>
+<body>
+    <div class="uploadWrapper">
+        <form id="imageUploadForm" class="imageUploadForm" method="post" enctype="multipart/form-data" action="{% url 'uploader_pg' %}">
+            {% csrf_token %}
+            <span class="helpText" id="helpText">Upload an image</span>
+            <input type="file" id="file" name="img" class="uploadButton" accept="image/*" />
+            <div id="uploadedImg" class="uploadedImg">
+                <span class="unveil"></span>
+            </div>
+            <span class="pickFile">
+                <button type="submit" class="pickFileButton">Upload</button>
+            </span>
+        </form>
+    </div>
+    <!-- Include jQuery before your custom JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Include your custom JavaScript file -->
+    <script src="{% static 'js/image_uplode.js' %}"></script>
+</body>
+</html>

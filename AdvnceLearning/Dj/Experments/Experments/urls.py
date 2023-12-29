@@ -22,5 +22,6 @@ urlpatterns = [
     path('members/', include('members.urls')),
     path('photos/', include('photos.urls')),
     path('images/', include('images.urls')),
+    path('data/',include('datasearch.urls')),
 ]
 import debug_toolbar

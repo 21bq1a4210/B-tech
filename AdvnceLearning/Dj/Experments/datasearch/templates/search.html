@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Search Bar</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8; /* Light background color */
+            color: #333; /* Text color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            padding: 15px;
+            background: linear-gradient(to right, #6f42c1, #4CAF50); /* Gradient background */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow for depth */
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .dropdown {
+            margin-right: 20px;
+            margin-bottom: 5px;
+            margin-left: 20px;
+        }
+
+        .dropdown select {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            background: linear-gradient(to left, #6f42c1, #4CAF50); /* Gradient background */
+            color: #0a0a0a;
+            cursor: pointer;
+            border-radius: 15px;
+            outline: none;
+        }
+
+        .search-container {
+            display: flex;
+            width: 100%;
+            max-width: 800px;
+            background-color: #fff; /* White background */
+            border-radius: 40px; /* Rounded corners */
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle box shadow for container */
+        }
+
+        #search-bar {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            font-size: 18px;
+            background: none; /* Transparent background */
+            color: #333; /* Text color */
+            outline: none;
+        }
+
+        #search-button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-top-right-radius: 40px; /* Match the container's border radius */
+            border-bottom-right-radius: 40px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        #search-button:hover {
+            background-color: #45a049;
+        }
+
+        #add-data-button {
+            margin-left: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        #add-data-button:hover {
+            background-color: #0056b3;
+        }
+
+        .search-results {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 800px;
+            box-sizing: border-box;
+        }
+
+        .search-results table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .search-results th, .search-results td {
+            border: 1px solid #0a0a0a;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .search-results th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <form method="post" action="{% url 'search' %}">
+            {% csrf_token %}
+            <div class="dropdown">
+            <select name="type">
+                <option value="device_name">Device Name</option>
+                <option value="empid">EmpId</option>
+                <option value="empname">EmpName</option>
+                <option value="device_working_condition">Device Working Condition</option>
+                <option value="os_version">OS Version</option>
+                <option value="location">Location</option>
+            </select>
+        </div>
+            <div class="search-container">
+                <input type="text" id="search-bar" name="search" placeholder="Search...">
+                <button id="search-button" type="submit">
+                    Search
+                </button>
+            </div>
+        </form>
+        <a href="{% url 'index' %}" id="add-data-button">Add Data</a>
+    </div>
+
+    <div class="search-results">
+        <h2>Search Results</h2>
+
+        {% if type_value and query %}
+            <p>Showing results for {{ type_value }}: {{ query }}</p>
+        {% endif %}
+
+        {% if employee_data %}
+            <table>
+                <tr>
+                    <th>EmpId</th>
+                    <th>EmpName</th>
+                    <th>DeviceName</th>
+                    <th>OS version</th>
+                    <th>Location</th>
+                    <th>Email</th>
+                    <th>Submission Time</th>
+                </tr>
+                {% for employee in employee_data %}
+                    <tr>
+                        <td>{{ employee.empid }}</td>
+                        <td>{{ employee.empname }}</td>
+                        <td>{{ employee.device_name }}</td>
+                        <td>{{ employee.os_version }}</td>
+                        <td>{{ employee.location }}</td>
+                        <td>{{ employee.email }}</td>
+                        <td>{{ employee.submission_time }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>No results found.</p>
+        {% endif %}
+    </div>
+
+    <script>
+        function animateButton() {
+            // Add your custom animation logic here
+            alert('Button Clicked!');
+        }
+    </script>
+
+</body>
+</html>

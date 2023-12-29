@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'members.apps.MembersConfig',        # app_name.apps.class_in_app.py
     'photos.apps.PhotosConfig',
-    'images.apps.ImagesConfig'
+    'images.apps.ImagesConfig',
+    'datasearch.apps.DatasearchConfig'
     # 'debug-toolbar'
 ]
 

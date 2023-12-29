@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details Form</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+
+        .alert {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Details Form</h1>
+    </div>
+    <form method="post" action="{% url 'index' %}">
+        {% csrf_token %}
+        <label for="empId">Employee ID:</label>
+        <input type="text" id="empId" name="empId" required>
+
+        <label for="empName">Employee Name:</label>
+        <input type="text" id="empName" name="empName" required>
+
+        <label for="workingCondition">Device Working Condition:</label>
+        <select id="workingCondition" name="workingCondition" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
+        <label for="deviceName">Device Name:</label>
+        <input type="text" id="deviceName" name="deviceName" required>
+
+        <label for="osVersion">OS Version:</label>
+        <input type="text" id="osVersion" name="osVersion" required>
+
+        <label for="location">Location:</label>
+        <select id="location" name="location" required>
+            <option value="a">a</option>
+            <option value="b">b</option>
+            <option value="c">c</option>
+            <option value="d">d</option>
+            <!-- Add more options as needed -->
+        </select>
+
+        <!-- Add the email field -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <button type="submit">Submit</button>
+
+        <!-- Add a search button that redirects to the search page -->
+        <a href="{% url 'search' %}">
+            <button type="button">Search</button>
+        </a>
+
+        <div>
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

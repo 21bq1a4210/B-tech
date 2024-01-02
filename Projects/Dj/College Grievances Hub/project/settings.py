@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'GrievancesRegistration.apps.GrievancesregistrationConfig',
     'debug_toolbar',
+    'dashboard.apps.DashboardConfig',
+    'home.apps.HomeConfig',
 ]
 
 MIDDLEWARE = [

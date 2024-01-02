@@ -1,0 +1,150 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+
+p{
+   font-family:"Bodoni MT Poster Compressed","sans-serif";
+    color:black;
+    font-size:20px;
+}
+/* Glassmorphism card effect */
+.card {
+
+
+    background-color:  rgba( 255,255,255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba( 255,255,255, 0.2);
+
+
+
+}
+.card img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+}
+label{
+    display: block;
+    width:200px;
+    padding:12px;
+    margin:10px auto;
+    border-radius: 5px;
+    cursor:pointer;
+
+}
+.labels{
+    background: rgb(255,232,232);
+    background: linear-gradient(90deg, rgba(255,232,232,1) 0%, rgba(246,144,116,1) 29%);    color:#ffffff;
+}
+.input{
+    display:none;
+}
+.forms label{
+    display: block;
+    color:black;
+    background-color: #ffffff;
+
+}
+.forms input{
+    display: block;
+    background-color: #e5e5f7;
+    border-color:transparent;
+    margin:10px;
+
+}
+.para{
+    font-family: "Microsoft YaHei UI Light","sans-serif";
+}
+
+input{
+    border-radius: 50%10%50%10%/10%50%10%50%;
+
+}
+label{
+    border-radius: 50%10%50%10%/10%50%10%50%;
+
+}
+
+
+
+/*--animations--*/
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 50px 50px;
+    }
+}
+@-moz-keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 50px 50px;
+    }
+}
+@-o-keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 50px 50px;
+    }
+}
+@keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 50px 50px;
+    }
+}
+@-webkit-keyframes bg-scrolling {
+    0% {
+        background-position: 50px 50px;
+    }
+}
+@-moz-keyframes bg-scrolling {
+    0% {
+        background-position: 50px 50px;
+    }
+}
+@-o-keyframes bg-scrolling {
+    0% {
+        background-position: 50px 50px;
+    }
+}
+@keyframes bg-scrolling {
+    0% {
+        background-position: 50px 50px;
+    }
+}
+/* Main styles */
+body {
+    margin-top: 13.5rem;
+    color: #f3f3f3;
+    font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+    text-align: center;
+    /* img size is 50x50 */
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+    -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+    /* Safari 4+ */
+    -moz-animation: bg-scrolling-reverse 0.92s infinite;
+    /* Fx 5+ */
+    -o-animation: bg-scrolling-reverse 0.92s infinite;
+    /* Opera 12+ */
+    animation: bg-scrolling-reverse 0.92s infinite;
+    /* IE 10+ */
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear;
+
+}
+body::before {
+
+    font-size: 8rem;
+    font-weight: 100;
+    font-style: normal;
+}
+.card1{
+    background-color: transparent;
+}
+.back1{
+    background-color: #F69074;
+
+}
+
+
+
+

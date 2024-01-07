@@ -49,6 +49,8 @@ class MyModel(models.Model):
     # UUIDField
     uuid_field = models.UUIDField(null=True, blank=True)
 
+    my_name = models.CharField(max_length=255, null=True, blank=True)
+
     # ForeignKey
     # (Example: If you have another model named 'RelatedModel')
     # related_model = models.ForeignKey(RelatedModel, on_delete=models.CASCADE, null=True, blank=True)

@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'members.apps.MembersConfig',        # app_name.apps.class_in_app.py
     'photos.apps.PhotosConfig',
     'images.apps.ImagesConfig',
-    'datasearch.apps.DatasearchConfig'
+    'datasearch.apps.DatasearchConfig',
+    'demo.apps.DemoConfig',
+    'login.apps.LoginConfig',
     # 'debug-toolbar'
 ]
 

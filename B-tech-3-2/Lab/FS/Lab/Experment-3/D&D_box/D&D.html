@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop Demo</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <center>
+        <h2>Drag and Drop HTML5 demo</h2>
+        <div>Try to move the purple box into the pink box</div>
+        <div id="boxA" draggable="true" ondragstart="return dragStart(event)">
+            <p>Drag Me</p>
+        </div>
+        <div id="boxB" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)">
+            Dustbin
+        </div>
+    </center>
+    <script src="script.js"></script>
+</body>
+</html>

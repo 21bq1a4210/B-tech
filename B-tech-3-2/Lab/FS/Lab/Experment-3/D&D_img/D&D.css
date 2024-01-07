@@ -1,0 +1,11 @@
+#div1 {
+    width: 500px;
+    height: 600px;
+    padding: 10px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+img {
+    cursor: move;
+}

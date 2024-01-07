@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #drag-container {
+            border: 2px dashed #ccc;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #drop-target {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #333;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dragContainer = document.getElementById('drag-container');
+            const dropTarget = document.getElementById('drop-target');
+
+            // Prevent default behavior for drag events
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                dropTarget.addEventListener(eventName, preventDefaults, false);
+                dragContainer.addEventListener(eventName, preventDefaults, false);
+            });
+
+            function preventDefaults(e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+
+            // Highlight drop area when item is dragged over
+            dropTarget.addEventListener('dragenter', () => {
+                dropTarget.classList.add('highlight');
+            });
+
+            dropTarget.addEventListener('dragleave', () => {
+                dropTarget.classList.remove('highlight');
+            });
+
+            // Handle dropped item
+            dropTarget.addEventListener('drop', (e) => {
+                dropTarget.classList.remove('highlight');
+                const droppedItem = document.getElementById(e.dataTransfer.getData('text/plain'));
+                dropTarget.appendChild(droppedItem);
+            });
+
+            // Make items draggable
+            const items = document.querySelectorAll('.draggable');
+            items.forEach(item => {
+                item.draggable = true;
+                item.addEventListener('dragstart', (e) => {
+                    e.dataTransfer.setData('text/plain', e.target.id);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="drag-container">
+        <div class="draggable" id="item1">Item 1</div>
+        <div class="draggable" id="item2">Item 2</div>
+        <div class="draggable" id="item3">Item 3</div>
+    </div>
+    <div id="drop-target"></div>
+</body>
+</html>

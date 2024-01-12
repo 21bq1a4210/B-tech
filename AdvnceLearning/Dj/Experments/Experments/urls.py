@@ -23,6 +23,7 @@ urlpatterns = [
     path('photos/', include('photos.urls')),
     path('images/', include('images.urls')),
     path('data/',include('datasearch.urls')),
+    path('buttontest/', include('buttontest.urls')),
     path('',include(('demo.urls'))),
 ]
 import debug_toolbar

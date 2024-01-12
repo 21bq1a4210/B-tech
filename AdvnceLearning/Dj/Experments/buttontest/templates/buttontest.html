@@ -1,10 +1,33 @@
+<!-- buttontest.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment Counter</title>
 </head>
 <body>
-$END$
+    {% with step=step|default:1 %}
+
+    <p>Counter value: {{ value }}</p>
+    {% if value|divisibleby:2 %}
+        <p>Even</p>
+    {% else %}
+        <p>Odd</p>
+    {% endif %}
+    <form method="post" action="{% url 'buttontest' %}">
+        {% csrf_token %}
+
+        {% if step == 1 %}
+            <p>I am in the first 'if' block</p>
+        {% elif step == 2 %}
+            <p>I am in the 'elif' block</p>
+        {% else %}
+            <p>I am in the 'else' block</p>
+        {% endif %}
+
+        <button type="submit">Increment Counter</button>
+    </form>
+    {% endwith %}
 </body>
 </html>

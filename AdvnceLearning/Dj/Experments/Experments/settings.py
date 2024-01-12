@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'datasearch.apps.DatasearchConfig',
     'demo.apps.DemoConfig',
     'login.apps.LoginConfig',
+    'buttontest.apps.ButtontestConfig',
     # 'debug-toolbar'
 ]
 

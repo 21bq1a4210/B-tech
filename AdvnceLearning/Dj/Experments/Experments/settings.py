@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'demo.apps.DemoConfig',
     'login.apps.LoginConfig',
     'buttontest.apps.ButtontestConfig',
+    'chatbot.apps.ChatbotConfig'
     # 'debug-toolbar'
 ]
 

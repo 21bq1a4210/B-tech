@@ -25,5 +25,6 @@ urlpatterns = [
     path('data/',include('datasearch.urls')),
     path('buttontest/', include('buttontest.urls')),
     path('',include(('demo.urls'))),
+    path('',include(('chatbot.urls'))),
 ]
 import debug_toolbar

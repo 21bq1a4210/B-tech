@@ -107,6 +107,13 @@ img_urls = ["https://upload.wikimedia.org/wikipedia/commons/e/ef/Virat_Kohli_dur
             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_eg1B7FFdpLMGzNHXf_-QrkeomOjvflQWHQ&s',
             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQohXZspQ43hcdkLKTM5X1WF8EOyY9GJA2mCQ&s',
             'https://img.jagranjosh.com/imported/images/E/GK/Amitabh-Bachchan-list-of-awards.webp',
+            'https://media.newyorker.com/photos/5909527c1c7a8e33fb38a864/master/pass/Man_of_Steel-580.jpeg',
+            'https://www.giantfreakinrobot.com/wp-content/uploads/2021/03/robert-downey-iron-man-900x506.jpg',
+            'https://upload.wikimedia.org/wikipedia/en/thumb/d/d9/Elizabeth_Olsen_as_Wanda_Maximoff.jpg/220px-Elizabeth_Olsen_as_Wanda_Maximoff.jpg',
+            'https://www.gqmiddleeast.com/2021/06/Tom-Cruise.jpg',
+            'https://telugubullet.com/wp-content/uploads/2023/12/SS-022-jpg.webp',
+            'https://static1.srcdn.com/wordpress/wp-content/uploads/2021/02/Wanda-maximoff-avengers-infinity-war-Tony-Stark-MCU.jpg',
+            'https://img.theweek.in/content/dam/week/gallery/shots/2021/january-24-2021/people/72-anushka-virat.jpg',
             ]
 
 for img_url in img_urls:

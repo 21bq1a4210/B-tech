@@ -182,6 +182,80 @@ While the sources don't explicitly define the criteria for assigning these prior
 
 # Why Organizations need Incident Response systems
 
+## The Critical Need for Incident Response Systems in Organisations
+
+The sources strongly emphasise the rising threat landscape in cyberspace and underscore the necessity for organisations to institute robust incident response management systems. This need stems from several key factors:
+
+*   **Increasing Prevalence of Cyberattacks:** The sources highlight that cyberattacks are becoming increasingly common in the interconnected digital economy. These attacks can originate from various sources, including individuals, groups, and even nation-states, and their sophistication continues to evolve.
+*   **Data Compromise as a Frequent Outcome:** Cyberattacks frequently result in the compromise of personal and business data, leading to significant financial losses, reputational damage, and legal liabilities for organisations. The sources cite real-world incidents involving various types of malicious code, underscoring the tangible threat posed by cybercrime. 
+*   **Need for Systematic and Timely Response:**  The sources stress that organisations require the ability to respond to incidents in a systematic and timely manner to mitigate damage, minimise disruption, and ensure business continuity. A well-defined incident response system provides a structured framework for handling security incidents effectively.
+
+### Benefits of Implementing Incident Response Systems
+
+The sources provide a detailed list of the benefits that organisations can reap from implementing robust incident response systems:
+
+*   **Systematic Incident Response:** The system ensures that appropriate steps are taken consistently when responding to security incidents.
+*   **Swift Recovery and Minimised Disruption:**  Having a clear plan in place facilitates a quicker and more efficient recovery from security incidents, minimising the loss or theft of information and reducing service disruption.
+*   **Proactive Learning and Improvement:**  Incident response systems allow organisations to learn from past incidents and use that knowledge to improve their security posture and preparedness for future events. 
+*   **Effective Handling of Legal Issues:**  A structured incident response process can help organisations navigate potential legal issues that may arise during or after a cybersecurity incident.
+*   **Improved User Satisfaction:**  By minimising downtime and protecting user data, effective incident response can contribute to improved user satisfaction and trust in the organisation's services.
+*   **Resource Optimisation:**  The system promotes more efficient use of staff resources, including service desk personnel, incident response teams, and IT professionals.
+*   **Enhanced Performance Monitoring:**  Incident response data can provide valuable insights for measuring and monitoring IT performance, particularly concerning service level agreements (SLAs).
+*   **Informed Decision-Making:**  Data collected through the incident response process supports better decision-making by executives regarding service quality and security investments.
+*   **Trend and Pattern Analysis:** A systematic incident handling system enables organisations to conduct root cause analysis and identify trends and patterns in cybersecurity incidents, informing future prevention strategies.
+
+### Organisational Actions to Protect Systems
+
+The sources also outline several key actions organisations can take to bolster their cybersecurity posture and protect their systems from incidents:
+
+*   **Protection from Malware:**  Organisations need to deploy robust security measures to prevent and mitigate malware infections, safeguarding sensitive information from various threats.
+*   **Protection of Sensitive Information:**  Protecting business-sensitive information, including PI, SPI, and PHI (in healthcare), is crucial for maintaining compliance, protecting customer trust, and avoiding legal repercussions.
+*   **Development of Prevention Strategies:**  Organisations should establish comprehensive strategies to prevent malware incidents, including security policies, technical processes, and user education programs.
+*   **Vulnerability Mitigation:**  Proactive measures to identify and mitigate vulnerabilities, such as implementing security patches and updates, are essential for reducing the risk of successful attacks.
+*   **Threat Mitigation Capabilities:**  Organisations should establish capabilities to detect and stop malware before it affects systems, such as deploying intrusion detection and prevention systems.
+*   **Robust Incident Response Process:**  Developing and implementing a comprehensive incident response process that encompasses preparation, detection, analysis, containment, eradication, recovery, and post-incident activities is critical.
+*   **Flexibility and Adaptability:**  The incident response system must be flexible and adaptable to address both current and emerging threats effectively.
+
+In summary, the sources highlight the vital role of incident response systems in today's threat-ridden digital landscape.  Implementing a comprehensive and well-defined incident response system equips organisations with the tools and processes necessary to respond swiftly and effectively to cybersecurity incidents, minimise damage and disruption, protect sensitive information, and ensure business continuity.
+
+
+---
+
+# Examples of incidents
+
+## Cybersecurity Incidents: Real-World Examples
+
+While the sources offer several definitions related to incident handling and list general categories of cybersecurity incidents, they provide two specific real-world examples of attacks that had serious consequences:
+
+### **Heartland Payment System Fraud (2010)**
+
+This incident, cited as **Insider Attack Example 1** \, involved a significant data breach that impacted Heartland Payment Systems, a major payment processing company. The attack resulted in the compromise of nearly 100 million credit cards from at least 650 financial services companies \.
+
+The source doesn't provide detailed information on the specific methods used in this attack or the type of insider involved. However, it highlights the incident to emphasize the serious threat posed by insider attacks \. 
+
+This example aligns with one of the general cybersecurity incidents listed in the sources: **"Detection of a program agent (potentially malicious software)"** \.  Given the scale of the Heartland breach, it likely involved malicious software installed on the company's systems, potentially with the help of an insider.
+
+### **Blue Shield Blue Cross (BCBS) Data Breach (2009)**
+
+This data breach, mentioned as **Insider Attack Example 2** \, stemmed from the theft of 57 hard drives from a BCBS training facility. The theft put the private information of approximately 500,000 customers at risk across at least 32 states \.
+
+Unlike the Heartland example, this incident emphasizes a different type of cybersecurity incident: **"Loss of computing devices"** \.  The theft of physical hard drives containing sensitive customer data underscores the importance of physical security measures in protecting against data breaches. 
+
+This example also reinforces the concept of **insider threats**, as the source suggests that insiders cannot be ignored when considering security risks \. It's possible that the theft was carried out by an insider or someone with inside knowledge of the facility.
+
+### Lessons Learned and Broader Implications
+
+The sources use these two examples to highlight key takeaways for organisations:
+
+*   **Insider threats are significant.** Organisations must address both malicious insiders and unintentional data leaks caused by negligence or carelessness \.
+*   **Physical security is critical.** Protecting physical assets, such as hard drives and computing devices, is as important as safeguarding digital systems \. 
+
+These real-world examples demonstrate that cybersecurity incidents can take various forms, ranging from sophisticated software attacks to simple theft of physical devices. They underscore the need for a multi-faceted approach to cybersecurity, encompassing both digital and physical security measures, as well as a focus on mitigating insider threats. 
+
+---
+
+# What organizations can do to protect
+
 ## Protecting Organisations in the Digital Age: A Multifaceted Approach
 
 The sources offer a comprehensive view of the evolving threat landscape and provide detailed recommendations for what organisations can do to protect their systems, data, and reputation in the face of these challenges.
@@ -269,79 +343,6 @@ The sources offer a comprehensive view of the evolving threat landscape and prov
 *   **Access Management:** Implement strong access control measures to restrict access to sensitive information based on defined roles and responsibilities.
 
 By adopting a multi-layered approach that encompasses these recommendations, organisations can significantly enhance their cybersecurity posture, minimise their risk of falling victim to cyberattacks, and protect their valuable assets and reputation. It's crucial to remember that cybersecurity is an ongoing process, requiring constant vigilance, adaptation, and improvement to stay ahead of evolving threats. 
-
----
-
-# Examples of incidents
-
-## Cybersecurity Incidents: Real-World Examples
-
-While the sources offer several definitions related to incident handling and list general categories of cybersecurity incidents, they provide two specific real-world examples of attacks that had serious consequences:
-
-### **Heartland Payment System Fraud (2010)**
-
-This incident, cited as **Insider Attack Example 1** \, involved a significant data breach that impacted Heartland Payment Systems, a major payment processing company. The attack resulted in the compromise of nearly 100 million credit cards from at least 650 financial services companies \.
-
-The source doesn't provide detailed information on the specific methods used in this attack or the type of insider involved. However, it highlights the incident to emphasize the serious threat posed by insider attacks \. 
-
-This example aligns with one of the general cybersecurity incidents listed in the sources: **"Detection of a program agent (potentially malicious software)"** \.  Given the scale of the Heartland breach, it likely involved malicious software installed on the company's systems, potentially with the help of an insider.
-
-### **Blue Shield Blue Cross (BCBS) Data Breach (2009)**
-
-This data breach, mentioned as **Insider Attack Example 2** \, stemmed from the theft of 57 hard drives from a BCBS training facility. The theft put the private information of approximately 500,000 customers at risk across at least 32 states \.
-
-Unlike the Heartland example, this incident emphasizes a different type of cybersecurity incident: **"Loss of computing devices"** \.  The theft of physical hard drives containing sensitive customer data underscores the importance of physical security measures in protecting against data breaches. 
-
-This example also reinforces the concept of **insider threats**, as the source suggests that insiders cannot be ignored when considering security risks \. It's possible that the theft was carried out by an insider or someone with inside knowledge of the facility.
-
-### Lessons Learned and Broader Implications
-
-The sources use these two examples to highlight key takeaways for organisations:
-
-*   **Insider threats are significant.** Organisations must address both malicious insiders and unintentional data leaks caused by negligence or carelessness \.
-*   **Physical security is critical.** Protecting physical assets, such as hard drives and computing devices, is as important as safeguarding digital systems \. 
-
-These real-world examples demonstrate that cybersecurity incidents can take various forms, ranging from sophisticated software attacks to simple theft of physical devices. They underscore the need for a multi-faceted approach to cybersecurity, encompassing both digital and physical security measures, as well as a focus on mitigating insider threats. 
-
----
-
-# What organizations can do to protect
-
-## The Critical Need for Incident Response Systems in Organisations
-
-The sources strongly emphasise the rising threat landscape in cyberspace and underscore the necessity for organisations to institute robust incident response management systems. This need stems from several key factors:
-
-*   **Increasing Prevalence of Cyberattacks:** The sources highlight that cyberattacks are becoming increasingly common in the interconnected digital economy. These attacks can originate from various sources, including individuals, groups, and even nation-states, and their sophistication continues to evolve.
-*   **Data Compromise as a Frequent Outcome:** Cyberattacks frequently result in the compromise of personal and business data, leading to significant financial losses, reputational damage, and legal liabilities for organisations. The sources cite real-world incidents involving various types of malicious code, underscoring the tangible threat posed by cybercrime. 
-*   **Need for Systematic and Timely Response:**  The sources stress that organisations require the ability to respond to incidents in a systematic and timely manner to mitigate damage, minimise disruption, and ensure business continuity. A well-defined incident response system provides a structured framework for handling security incidents effectively.
-
-### Benefits of Implementing Incident Response Systems
-
-The sources provide a detailed list of the benefits that organisations can reap from implementing robust incident response systems:
-
-*   **Systematic Incident Response:** The system ensures that appropriate steps are taken consistently when responding to security incidents.
-*   **Swift Recovery and Minimised Disruption:**  Having a clear plan in place facilitates a quicker and more efficient recovery from security incidents, minimising the loss or theft of information and reducing service disruption.
-*   **Proactive Learning and Improvement:**  Incident response systems allow organisations to learn from past incidents and use that knowledge to improve their security posture and preparedness for future events. 
-*   **Effective Handling of Legal Issues:**  A structured incident response process can help organisations navigate potential legal issues that may arise during or after a cybersecurity incident.
-*   **Improved User Satisfaction:**  By minimising downtime and protecting user data, effective incident response can contribute to improved user satisfaction and trust in the organisation's services.
-*   **Resource Optimisation:**  The system promotes more efficient use of staff resources, including service desk personnel, incident response teams, and IT professionals.
-*   **Enhanced Performance Monitoring:**  Incident response data can provide valuable insights for measuring and monitoring IT performance, particularly concerning service level agreements (SLAs).
-*   **Informed Decision-Making:**  Data collected through the incident response process supports better decision-making by executives regarding service quality and security investments.
-*   **Trend and Pattern Analysis:** A systematic incident handling system enables organisations to conduct root cause analysis and identify trends and patterns in cybersecurity incidents, informing future prevention strategies.
-
-### Organisational Actions to Protect Systems
-
-The sources also outline several key actions organisations can take to bolster their cybersecurity posture and protect their systems from incidents:
-
-*   **Protection from Malware:**  Organisations need to deploy robust security measures to prevent and mitigate malware infections, safeguarding sensitive information from various threats.
-*   **Protection of Sensitive Information:**  Protecting business-sensitive information, including PI, SPI, and PHI (in healthcare), is crucial for maintaining compliance, protecting customer trust, and avoiding legal repercussions.
-*   **Development of Prevention Strategies:**  Organisations should establish comprehensive strategies to prevent malware incidents, including security policies, technical processes, and user education programs.
-*   **Vulnerability Mitigation:**  Proactive measures to identify and mitigate vulnerabilities, such as implementing security patches and updates, are essential for reducing the risk of successful attacks.
-*   **Threat Mitigation Capabilities:**  Organisations should establish capabilities to detect and stop malware before it affects systems, such as deploying intrusion detection and prevention systems.
-*   **Robust Incident Response Process:**  Developing and implementing a comprehensive incident response process that encompasses preparation, detection, analysis, containment, eradication, recovery, and post-incident activities is critical.
-*   **Flexibility and Adaptability:**  The incident response system must be flexible and adaptable to address both current and emerging threats effectively.
-
-In summary, the sources highlight the vital role of incident response systems in today's threat-ridden digital landscape.  Implementing a comprehensive and well-defined incident response system equips organisations with the tools and processes necessary to respond swiftly and effectively to cybersecurity incidents, minimise damage and disruption, protect sensitive information, and ensure business continuity.
 
 ---
 

@@ -73,7 +73,7 @@ By combining Pig's high-level data flow language with Hadoop's distributed proce
 
 ---
 
-# ## Pig Philosophy
+# Pig Philosophy
 
 The "Pig Philosophy" is a set of metaphors that highlight Pig's key strengths and capabilities. The sources depict these metaphors visually in and. The sources describe the four principles of the Pig Philosophy as follows:
 
@@ -87,7 +87,7 @@ The Pig Philosophy, presented through these four metaphors, effectively captures
 
 ---
 
-# ## Use Case for Pig: ETL Processing
+# Use Case for Pig: ETL Processing
 
 The sources highlight Pig's strong suitability for **ETL (Extract, Transform, Load) processing**, a crucial aspect of data warehousing and analytics. Here's a detailed explanation:
 
@@ -107,7 +107,7 @@ In essence, Pig acts as a powerful tool to streamline the entire ETL pipeline. I
 
 ---
 
-# ## Pig Latin: A Data Flow Language for Hadoop
+# Pig Latin: A Data Flow Language for Hadoop
 
 Pig Latin is the data flow language used by Apache Pig, a platform designed for analysing large datasets within the Hadoop ecosystem. It provides a high-level, declarative approach to expressing data transformations, making it easier for developers to work with complex data manipulations without having to write low-level MapReduce code.
 
@@ -191,7 +191,7 @@ These data types are fundamental to Pig's ability to process and analyse data. U
 
 ---
 
-# ## How to Run Pig: Modes and Methods
+# How to Run Pig: Modes and Methods
 
 The sources outline various ways to run Pig, highlighting its flexibility in adapting to different development and execution needs. It can operate in distinct modes, each tailored for specific scenarios, and can be accessed through various approaches, allowing users to interact with Pig in ways that best suit their workflow.
 
@@ -254,7 +254,7 @@ The choice of execution mode and accessing approach depends on the specific task
 
 ---
 
-# ## Running Pig: Execution Modes
+# Running Pig: Execution Modes
 
 Pig offers flexibility in how its scripts can be executed, providing two main execution modes to cater to different development and deployment scenarios. The sources outline these modes:
 
@@ -294,7 +294,7 @@ In summary, Pig offers a variety of execution modes and approaches to suit diffe
 
 ---
 
-# ## Executing HDFS Commands within Pig
+# Executing HDFS Commands within Pig
 
 The sources explain that Pig offers several ways to interact with the Hadoop Distributed File System (HDFS), allowing users to manage files and directories while working with Pig Latin scripts.
 
@@ -322,7 +322,7 @@ To confirm the complete list of supported HDFS commands and their usage within P
 
 ---
 
-# ## Pig Operations: A Comprehensive Overview
+# Pig Operations: A Comprehensive Overview
 
 The sources provide a detailed explanation of various operations available in Pig Latin, the scripting language used in Apache Pig. These operations enable users to perform data manipulation, analysis, and transformation tasks effectively within the Hadoop ecosystem. Here's a comprehensive overview:
 
@@ -418,7 +418,7 @@ This comprehensive overview highlights the rich set of operations available in P
 
 ---
 
-# ## Exploring Piggy Bank in Apache Pig
+# Exploring Piggy Bank in Apache Pig
 
 Piggy Bank is a valuable feature within Apache Pig that enhances its capabilities and simplifies common tasks. The sources offer insights into the nature and benefits of Piggy Bank:
 
@@ -530,7 +530,7 @@ This word count example highlights several key Pig Latin operations and concepts
 
 ---
 
-# ## Pig at Yahoo: Practical Applications
+# Pig at Yahoo: Practical Applications
 
 The sources highlight the significance of Apache Pig at Yahoo, showcasing its real-world applications and advantages.
 
@@ -703,6 +703,42 @@ DUMP student_names;
 *   **Storing Results:** To save the output of your Pig script to a file, use the `STORE` operator instead of `DUMP`. () 
 
 Remember to replace `/path/to/student_data.txt` with the actual path to your data file. This example demonstrates the basic usage of the `LOAD`, `FILTER`, `FOREACH`, and `DUMP` operators in Pig Latin. You can combine these operations in various ways to perform data analysis and manipulation tasks. 
+
+---
+
+## Pig Operations in Tabular Format
+
+The sources provide a variety of Pig Latin operations and their uses. The following table summarises these operations:
+
+| Operation      | Description                                                                                                                                                                                                                                                                       | Example                                                                                                                                                                                                                                                                                                                          |
+| :------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **LOAD**       | Loads data from the local file system or HDFS into a relation.                                                                                                                                                                                                                         | `student_data = LOAD '/path/to/student_data.txt' USING PigStorage(',') AS (Sid:int, name:chararray, branch:chararray, CGPA:float);`                                                                                                                                                                                                |
+| **STORE**      | Stores the results of a Pig Latin script to a specified location in the file system.                                                                                                                                                                                                    | `STORE student_names INTO '/output/high_cgpa_students';`                                                                                                                                                                                                                                                                     |
+| **FILTER**      | Selects tuples (rows) from a relation based on specified conditions.                                                                                                                                                                                                                  | `high_cgpa_students = FILTER student_data BY CGPA > 7.5;`                                                                                                                                                                                                                                                                    |
+| **FOREACH**    | Used to process each tuple in a relation and transform its fields. Often used with `GENERATE` to select or modify fields.                                                                                                                                                                 | `student_names = FOREACH high_cgpa_students GENERATE name;`                                                                                                                                                                                                                                                                  |
+| **DUMP**       | Displays the contents of a relation to the console. Used for debugging and inspecting data.                                                                                                                                                                                            | `DUMP student_names;`                                                                                                                                                                                                                                                                                                         |
+| **GROUP**      | Collects records with the same key together. Creates groups based on a specified field.                                                                                                                                                                                                 | `grouped_students = GROUP student_data BY branch;`                                                                                                                                                                                                                                                                          |
+| **DISTINCT**   | Removes duplicate tuples from a relation.                                                                                                                                                                                                                                          | `unique_students = DISTINCT student_data;`                                                                                                                                                                                                                                                                                 |
+| **ORDER**      | Sorts a relation based on one or more fields.                                                                                                                                                                                                                                          | `sorted_students = ORDER student_data BY CGPA DESC;`                                                                                                                                                                                                                                                                        |
+| **LIMIT**      | Limits the number of output tuples in a relation.                                                                                                                                                                                                                                       | `top_students = LIMIT student_data 10;`                                                                                                                                                                                                                                                                                      |
+| **JOIN**       | Joins two or more relations based on values in common fields.                                                                                                                                                                                                                        | `student_department = JOIN student_data BY Sid, department_data BY student_id;`                                                                                                                                                                                                                                              |
+| **UNION**      | Merges the contents of two or more relations.                                                                                                                                                                                                                                       | `all_data = UNION student_data, teacher_data;`                                                                                                                                                                                                                                                                               |
+| **SPLIT**      | Partitions a relation into two or more relations based on specified conditions.                                                                                                                                                                                                           | `SPLIT student_data INTO high_achievers IF CGPA > 8.0, average_students IF CGPA >= 6.0 AND CGPA <= 8.0, low_performers IF CGPA < 6.0;`                                                                                                                                                                                 |
+| **SAMPLE**     | Selects a random sample of data from a relation based on a specified sample size or probability.                                                                                                                                                                                        | `sampled_students = SAMPLE student_data 0.1;`                                                                                                                                                                                                                                                                             |
+| **DESCRIBE**   | Returns the schema of a relation, showing the fields and their data types.                                                                                                                                                                                                           | `DESCRIBE student_data;`                                                                                                                                                                                                                                                                                                       |
+| **EXPLAIN**    | Displays the execution plan of a Pig Latin statement. Useful for understanding how Pig will process the data.                                                                                                                                                                            | `EXPLAIN student_names;`                                                                                                                                                                                                                                                                                                         |
+| **ILLUSTRATE** | Provides a visual representation of the data flow in a Pig Latin script. Helps to understand the transformations being applied.                                                                                                                                                              | `ILLUSTRATE student_data;`                                                                                                                                                                                                                                                                                                      |
+| **TOKENIZE**  | Splits a string into a bag of words (tokens) based on whitespace or punctuation.                                                                                                                                                                                                       | `words = FOREACH lines GENERATE FLATTEN(TOKENIZE(line)) as word;`                                                                                                                                                                                                                                                               |
+| **FLATTEN**    | Removes nested bags, creating individual records from each element in a bag. Often used with `TOKENIZE` to process each word individually.                                                                                                                                                | `words = FOREACH lines GENERATE FLATTEN(TOKENIZE(line)) as word;`                                                                                                                                                                                                                                                               |
+| **UDFs**      | User-Defined Functions are custom functions written in Java (or other supported languages) to perform specific operations that are not available as built-in Pig operators. They allow you to extend Pig's functionality and implement complex logic.                                         | `register '/path/to/myudfs.jar';`\
+`upper_names = FOREACH student_data GENERATE myudfs.ToUpper(name);`                                                                                                                                                                                                                                                              |
+| **Piggy Bank** | A collection of user-contributed UDFs that provide additional functionality for Pig. You can use these UDFs directly in your scripts.                                                                                                                                                         | `register '/path/to/piggybank.jar';`\
+`cleaned_text = FOREACH raw_data GENERATE org.apache.pig.piggybank.evaluation.string.REGEX_EXTRACT(text, 'pattern', 1);`                                                                                                                                                                                               |
+| **Streaming**  | Allows you to execute external scripts or commands (e.g., Python, Perl) within a Pig Latin script. Pig passes data to the external script, which processes it and returns the results. Useful for integrating Pig with existing tools or implementing logic that is easier to express in other languages. | `stream_output = STREAM data THROUGH `\
+`'python /path/to/my_python_script.py arg1 arg2'`\
+`AS (output_field1:chararray, output_field2:int);`                                                                                                                                                                                                                                                                |
+
+This table provides a comprehensive overview of the common Pig Latin operations and their applications in data processing. 
 
 ---
 

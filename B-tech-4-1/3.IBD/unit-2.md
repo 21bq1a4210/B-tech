@@ -456,3 +456,30 @@ YARN's introduction has profoundly impacted the Hadoop ecosystem, enabling:
 YARN has revolutionized Hadoop by transforming it from a batch-processing system to a versatile data processing platform. Its flexible architecture, improved resource management, and support for diverse processing frameworks have unlocked new possibilities for Big Data analytics, enabling organizations to handle increasingly complex workloads and gain valuable insights from their data.
 
 ----
+
+# Q. Outline the evolution of Hadoop platform and discuss the role of Google, Apache and Yahoo in each stages of development
+
+## Evolution of the Hadoop Platform and the Roles of Google, Apache, and Yahoo
+
+* The idea for Hadoop came about when **Mike Cafarella and Doug Cutting** were working on the **Apache Nutch** project, an open-source web search engine that was part of a larger project at **Yahoo**.
+* They were looking for a way to build a search engine system that could index a billion pages. At the time, this would have been a very expensive undertaking, costing an estimated $35,000 per month.
+* Around the same time, **Google** published papers on its **Google File System (GFS)** in 2003 and **MapReduce** in 2004. These technologies allowed Google to store and process vast amounts of data in a distributed and efficient manner.
+    * GFS is a distributed file system that manages data across multiple servers and computers. 
+    * MapReduce is a programming model for processing data, where the input dataset is split into independent chunks that are processed in parallel by "map" tasks, and then the results are combined by "reduce" tasks.
+* Cafarella and Cutting realized that they could use the ideas from GFS and MapReduce to build their own distributed file system and processing framework, which they called **Hadoop**. 
+    * **Hadoop = GFS + MapReduce = HDFS + MapReduce**
+* Hadoop is an **open-source software framework** managed by the **Apache Software Foundation.** This means that it is free to download, use, and contribute to. Hadoop is written in **Java**.
+
+### Hadoop 1.0
+
+* The core components of the initial Hadoop 1.0 framework were:
+    * **HDFS (Hadoop Distributed File System):** The storage component of Hadoop, based on Google's GFS.
+    * **MapReduce:** The processing framework of Hadoop, based on Google's MapReduce.
+
+### Hadoop 2.0 (YARN)
+
+* Hadoop 1.0 had limitations, such as a single NameNode managing the entire namespace and a restricted processing model suitable only for batch-oriented MapReduce jobs.
+* To address these limitations, **Yahoo** developed **YARN (Yet Another Resource Negotiator)** and contributed it to the Hadoop project. YARN became a sub-project of **Hadoop 2.x**. 
+* YARN is a general processing platform that allows multiple applications to run on Hadoop and share resources efficiently. It separates resource management from data processing, making Hadoop suitable for various types of processing beyond batch processing, including interactive, online, streaming, and graph processing.
+
+**The sources do not contain information on specific roles Google played in the later stages of Hadoop development.** 
